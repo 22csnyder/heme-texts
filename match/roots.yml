@@ -1,0 +1,28 @@
+# This file is for the components of words like "lymph" or "cyte"
+# ; not sure if it will be worth it or should build bigger scale macros
+
+matches:
+  - trigger: "cy/"
+    replace: ".cyto"
+    right_word: false
+
+  - trigger: "cy\\"
+    replace: ".cyte"
+#    right_word: true
+
+  - trigger: "ey/"
+    replace: "erythro"
+
+  - trigger: "ly/"
+    replace: "lympho"
+
+  - trigger: "ly\\"
+    replace: "lymph"
+
+
+  - trigger: "pc\\"
+    replace: "plasma cell"
+
+  - trigger: "pc/"
+    replace: "plasmacytic"
+

@@ -1,0 +1,53 @@
+
+matches:
+  - trigger: "ab\\"
+    replace: "antibody"
+
+  - trigger: "ag\\"
+    replace: "antigen"
+
+  - trigger: ";mo\\"
+    replace: "monocyte"
+    propagate_case: true
+
+  - triggers: ["ec\\", "ery\\"]
+    replace: "erythrocyte"
+    propagate_case: true
+
+  - trigger: "mo\\"
+    replace: "monocyte"
+    propagate_case: true
+
+  - triggers: ["ly\\", "lyc\\", "yc\\"]
+    replace: "lymphocyte"
+    propagate_case: true
+
+  - triggers: ["eos\\", "eo\\"]
+    replace: "eosinophil"
+    propagate_case: true
+
+  - triggers: ["bo\\", "bas\\","baso\\","baso/c"]
+    replace: "basophil"
+    propagate_case: true
+
+  - trigger: "e:c"
+    replace: "erythrocyte"
+
+
+  - triggers: ["t-\\","tc\\","t-c","tc:","t/c"]
+    replace: "T-cell"
+    propagate_case: true
+
+  - triggers: ["bc\\", "b/c"]
+    replace: "B-cell"
+    propagate_case: true
+
+  - trigger: "\\mo"
+    replace: "monocyte"
+    propagate_case: true
+
+  - trigger: "\\erycp"
+    replace: "anemia" #@ erythrocytopenia
+    propagate_case: true
+
+

@@ -1,0 +1,97 @@
+
+matches:
+
+
+## General Medical ##
+# Phrases
+  - trigger: ":ki"
+    replace: "ki-67 is positive in $|$% of tumor cells."
+    propagate_case: true
+
+  - trigger: ":pt"
+    replace: "The patient is a ***-year-old with ***"
+    propagate_case: true
+  
+  - trigger: "pt\t"
+    replace: "patient is a ***-year-old with ***"
+    propagate_case: true
+  
+  - trigger: "hx\t"
+    replace: "history of "
+    propagate_case: true
+  
+  - trigger: "c/f"
+    replace: "concern for "
+    propagate_case: true
+    word: true
+
+
+
+
+  - trigger: ":fc"
+    replace: "flow cytometry"
+    propagate_case: true
+
+  - trigger: "\\fc"
+    replace: "flow cytometry"
+    propagate_case: true
+
+  - trigger: ":tlh"
+    replace: "trilineage hematopoiesis"
+    propagate_case: true
+
+  - trigger: ":nib"
+    replace: "no increase in blasts"
+    propagate_case: true
+
+
+#cytosis, cytopenia
+  - trigger: ".tcp"
+    replace: "thrombocytopenia"
+    propagate_case: true
+
+  - trigger: "\\tcp"
+    replace: "thrombocytopenia"
+    propagate_case: true
+
+  - trigger: "\\hc"
+    replace: "hypercellular"
+    propagate_case: true
+
+  - trigger: "\\tcs"
+    replace: "thrombocytosis"
+    propagate_case: true
+
+  - triggers: ["\\lymphocp", "\\ycp", "\\lycp"]
+    replace: "lymphopenia"
+    propagate_case: true
+
+  - triggers: ["\\lymphocs","\\ycs", "\\lycs"]
+    replace: "lymphocytosis"
+    propagate_case: true
+
+  - triggers: ["\\lympho", "\\ycs", "\\lycs"]
+    replace: "lymphocytosis"
+    propagate_case: true
+  
+  - triggers: ["\\leukocp","\\leucp", "\\lcp"]
+    replace: "leukopenia"
+    propagate_case: true
+
+  - triggers: ["\\leukocs","\\leucs", "\\lcs"]
+    replace: "leukocytosis"
+    propagate_case: true
+
+
+
+## Histology ##
+#Common
+
+#alder-reilly
+  - trigger: "alder-reilly::"
+    replace: "azurophilic granules, resembling toxic granulation in PMNs. Lymphocytes show metachromatic granules surrounded by a clear zone"
+
+  - trigger: "$GTBM|bm"
+    replace: "the marrow shows fat and hematopoietic atrophy with replacement by granular to fibrillar eosinophilic material in the interstitium, which is rich in hyaluronic acid and stains with Alcian blue at pH 2.5"
+
+
