@@ -19,15 +19,15 @@ matches:
     propagate_case: true
     word: true
 
-  - triggers: ["thrombo/cp","plt/cp","p/cp"]
+  - triggers: ["thrombo/cp","plt/cp","p/cp","t/cp"]
     replace: "thrombocytopenia"
     propagate_case: true
     word: true
-  - triggers: ["thrombo/cs","plt/cs","p/cs"]
+  - triggers: ["thrombo/cs","plt/cs","p/cs","t/cs"]
     replace: "thrombocytosis"
     propagate_case: true
     word: true
-  - triggers: ["plt/c","thrombo/c","p/c"]
+  - triggers: ["plt/c","thrombo/c","p/c","t/c"]
     replace: "platelet"
     propagate_case: true
     word: true
