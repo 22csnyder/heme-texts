@@ -23,3 +23,45 @@ matches:
             - /Users/christophersnyder/Projects/heme-texts/.venv/bin/python
             - /Users/christophersnyder/Projects/heme-texts/scripts/hw_repy.py
 
+## Also works!! 
+#Last step is to pass a variable to the script
+  - trigger: ":sortinghat"
+    replace: "{{output}}"
+    vars:
+      - name: student
+        type: echo
+        params:
+          echo: "Brave, daring, chivalrous, and sometimes a bit reckless."
+      - name: output
+        type: script
+        params:
+          args:
+            - /Users/christophersnyder/Projects/heme-texts/.venv/bin/python
+            - /Users/christophersnyder/Projects/heme-texts/scripts/hw_mrvn.py
+            - "{{student}}"
+
+
+#  - regex: "greet(?P<person>.*)\\."
+#    replace: "Hi {{person}}!"
+# Which would expand to Hi Mark! every time you write greetMark. # cursor:ignore
+
+  - regex: ":aihatsort\\((?P<student>.*)\\)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - /Users/christophersnyder/Projects/heme-texts/.venv/bin/python
+            - /Users/christophersnyder/Projects/heme-texts/scripts/hw_mrvn.py
+            - "{{student}}"
+
+## words ish -- but marvin keeps printing to console
+# 
+# ───────────────╮
+# │                                                                              │
+# │  Tool:    Mark Task 71a3ee78 ("Classification Task") successful              │
+# │  Status:  ✅                                                                 │
+# │  Result   0                                                                  │
+# │                                                                              │
+# ╰──────────────────────────────────────────────────────────────── 10:42:26 PM ─╯
