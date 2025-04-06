@@ -95,3 +95,4 @@ bugchat/celerybeat-schedule.db
 
 !ai-call-logger/call_log.json
 !ai-call-logger/user_audio.wav
+heme-texts.code-workspace
