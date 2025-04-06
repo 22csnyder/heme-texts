@@ -1,0 +1,23 @@
+[project]
+name = "heme-texts"
+version = "0.1.0"
+description = "Text expansions for hematopathology."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+
+[project.scripts]
+hw_repy = "scripts.hw_repy:main"
+
+[tool.uv.workspace]
+members = ["Projects/heme-texts"]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+]
+
+
+
+
