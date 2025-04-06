@@ -1,0 +1,8 @@
+
+matches:
+  - trigger: ":hairy"
+    replace: >
+      Flow cytometry identifies an immunophenotypically abnormal CD5-/CD10- B-cell
+      population with co-expression of CD11c, CD25, and CD103,  # ignore
+      consistent with involvement by hairy cell leukemia comprising $|$% of total cellular events. #ignore
+

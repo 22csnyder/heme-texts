@@ -18,7 +18,7 @@ matches:
     replace: "monocyte"
     propagate_case: true
 
-  - triggers: ["ly\\", "lyc\\", "yc\\"]
+  - triggers: ["lymph/c","ly\\", "lyc\\", "yc\\"]
     replace: "lymphocyte"
     propagate_case: true
 
