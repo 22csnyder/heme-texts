@@ -2,6 +2,10 @@
 # $ signfies start of diag acronym for now
 
 matches:
+  - trigger: "$PNH"
+    replace: "Paroxysmal nocturnal hemoglobinuria"
+    propagate_case: true
+
   - trigger: "$PCH"
     replace: "Paroxysmal cold hemoglobinuria"
     

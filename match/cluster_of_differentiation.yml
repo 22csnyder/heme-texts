@@ -1,0 +1,86 @@
+#cluster of differentiation
+# maybe I can avoid holding shift key so often and save my pinky finger
+# also, a good medium to organize & operationalize knowledge
+
+matches:
+  - triggers: ["cd11c"]
+    label: "CD11c"
+    replace: "CD11c"
+    word: true
+  - triggers: ["cd25"]
+    label: "CD25"
+    replace: "CD25"
+    word: true
+  - triggers: ["cd103"]
+    label: "CD103"
+    replace: "CD103"
+    word: true
+  - triggers: ["cd103"]
+    label: "CD103"
+    replace: "CD103"
+    word: true
+
+
+  - triggers: ["kappa"]
+    label: "Kappa"
+    replace: "Kappa"
+    word: true
+  - triggers: ["lambda"]
+    label: "Lambda"
+    replace: "Lambda"
+    word: true
+
+  - triggers: ["k/ish","k\\","k-ish", "ihc\\", "Kappa-ish", "kappa-ish"]
+    label: "Kappa-ISH"
+    replace: "Kappa-ISH"
+    word: true
+  - triggers: ["l/ish","l\\","l-ish", "ihc\\", "Lambda-ish", "lambda-ish"]
+    label: "Lambda-ISH"
+    replace: "Lambda-ISH"
+    word: true
+
+  - triggers: ["eber", "eber\\","e/ish","e-ish","eber-ish"]
+    label: "EBER-ISH"
+    replace: "EBER-ISH"
+    word: true
+
+  - triggers: ["cd34"]
+    label: "CD34"
+    replace: "CD34"
+    word: true
+
+  - triggers: ["cd38"]
+    label: "CD38"
+    replace: "CD38"
+    word: true
+
+  - triggers: ["cd45"]
+    label: "CD45"
+    replace: "CD45"
+    word: true
+    
+
+  - triggers: ["cd56"]
+    label: "CD56"
+    replace: "CD56"
+    word: true
+
+  - trigger: "cd59"
+    label: "CD59"
+    replace: "CD59"
+    word: true
+
+  - trigger: "cd55"
+    label: "CD55"
+    replace: "CD55"
+    word: true
+
+  - trigger: "cd55"
+    label: "CD55"
+    replace: "CD55"
+    word: true
+
+  - trigger: "flaer"
+    label: "FLAER (marker for flow cytometry)"
+    replace: "FLAER"
+    word: true
