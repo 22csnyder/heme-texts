@@ -19,6 +19,7 @@ __pycache__/
 *.py[cod]
 
 # Ignore virtual environments
+## used by uv
 venv/
 env/
 
@@ -27,9 +28,9 @@ env/
 Thumbs.db
 
 # Include specific files
-!quarto/export.html
-!logfile.log
-!merge_predict_demo.py
+# !quarto/export.html
+# !logfile.log
+# !merge_predict_demo.py
 
 *.swp
 # Ignore Python distribution / packaging
@@ -95,4 +96,9 @@ bugchat/celerybeat-schedule.db
 
 !ai-call-logger/call_log.json
 !ai-call-logger/user_audio.wav
-heme-texts.code-workspace
+
+# Ignore VSCode workspace files
+*.code-workspace
+
+.vscode/
+

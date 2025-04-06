@@ -1,0 +1,25 @@
+#Toy file to demo calling a python sc
+
+matches:
+  - trigger: ":hello"
+    replace: "hello {{output}}"
+    vars:
+      - name: output
+        type: echo
+        inject_vars: false
+        params:
+          echo: "{{var}}"
+
+
+# [Espanso]: An error occurred during rendering, please examine the logs for more information. # cursor:ignore
+
+  - trigger: ":pyscript"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - /Users/christophersnyder/Projects/heme-texts/.venv/bin/python
+            - /Users/christophersnyder/Projects/heme-texts/scripts/hw_repy.py
+
