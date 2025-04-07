@@ -1,0 +1,29 @@
+matches:
+
+#These immunoglobulin formatters are given to match on left-word boundaries
+# this allows for "igm-paraprotein" or "iga-deficiency" to trigger.
+  - trigger: "igg"
+    label: "IgG"
+    replace: "IgG"
+    left_word: true
+
+  - trigger: "igm"
+    label: "IgM"
+    replace: "IgM"
+    left_word: true
+
+  - trigger: "igd"
+    label: "IgD"
+    replace: "IgD"
+    left_word: true
+
+  - trigger: "iga"
+    label: "IgA"
+    replace: "IgA"
+    left_word: true
+
+  - trigger: "i/g"
+    replace: "immunoglobulin"
+    label: "immunoglobulin"
+    word: true
+    propagate_case: true

@@ -1,0 +1,9 @@
+matches:
+  - triggers: ["hgb;","hg;"]
+    replace: "hemoglobin"
+    propagate_case: true
+
+  - trigger: "hgb"
+    replace: "Hgb"
+    word: true
+

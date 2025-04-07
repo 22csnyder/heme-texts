@@ -109,7 +109,8 @@ matches:
       {{:cytospin_text}}
 
     # {{Bbilling;}}
-      
+
+
 
 #hairy cell
 
@@ -118,8 +119,7 @@ matches:
     replace: |
       {{:specimen_adequate_text}}
 
-      Flow cytometry identifies an immunophenotypically abnormal CD5-/CD10- B-cell
-      population with co-expression of {{$HCL.pheno;}} {{c/w}} involvement by hairy cell leukemia comprising $|$% of total cellular events. 
+      Flow cytometry identifies an immunophenotypically abnormal CD5-/CD10- B-cell population with co-expression of {{$HCL.pheno;}} {{c/w}} involvement by hairy cell leukemia comprising $|$% of total cellular events. 
 
       {{:cytospin_text}}
 

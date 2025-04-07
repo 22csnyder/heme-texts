@@ -8,12 +8,6 @@
 # Flow cytometry analysis of the peripheral blood shows…
 
 
-matches:
-  - triggers: ["bcell;","cll;","$CLL.pbl\\","pbl;","pbcll;"]
-    label: "CLL cellular morphology in peripheral blood"
-    replace: >
-      small mature-appearing lymphocytes with round nuclear contours, condensed chromatin and indistinct nucleoli. Scattered prolymphocytes are present but not significantly increased. Smudge cells are present. 
-
 
 # Pancytopenia pbpancytopenia
 # CBC data from [date] shows WBC-X K/cumm, hemoglobin-X g/dL, hematocrit-X%, platelets-X K/cumm, MCV-X fL, RDW CV-X%.
@@ -34,6 +28,15 @@ matches:
 # A 100-cell differential count on peripheral blood shows …
 # Flow cytometry analysis of the peripheral blood shows…
 
+
+matches:
+#pbcll
+  - triggers: ["bcell;","cll;","$CLL.pbl\\","pbl;","pbcll;"]
+    label: "CLL cellular morphology in peripheral blood"
+    replace: >
+      small mature-appearing lymphocytes with round nuclear contours, condensed chromatin and indistinct nucleoli. Scattered prolymphocytes are present but not significantly increased. Smudge cells are present. 
+
+  #pbsezarypos
   - triggers: ["bcell;","sez;","$SEZ.pbl;","pbl;","pbsezaryneg;"]
     label: "SEZ cellular morphology in peripheral blood"
     replace: >

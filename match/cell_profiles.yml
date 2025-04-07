@@ -1,0 +1,35 @@
+# Cell profiles
+# For descriptions and char of unicellular types. 
+
+matches:
+  - trigger: "RS/c"
+    label: "Reed Sternberg Cell (RS Cell)"
+    replace: "Reed Sternberg Cell"
+    word: true
+
+  - trigger: "RS.cd;"
+    label: "Immunophenotype - Reed Sternberg Cell"
+    replace: "cd..."
+
+
+
+  - trigger: "immunoblastic;"
+    label: "immunoblastic"
+    replace: >
+      immunoblasts possess a 
+      large round nucleus with 
+      basophilic cytoplasm, variably vacuolated.
+      immunoblasts are actively dividing 
+          (ki-67 is positive in 90% of cells),
+
+      immunoblasts show positivitiy for 
+      B-cell activation markers (CD19,CD20,CD38) as well as 
+      CD138 as they differentiate into plasma cells
+
+      immunoblasts can be seen in Large B-cell lymphoma (LBCL) or 
+      Burkitt lymphoma (BL)
+
+
+
+
+

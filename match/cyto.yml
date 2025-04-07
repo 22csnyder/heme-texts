@@ -45,7 +45,7 @@ matches:
     propagate_case: true
     word: true
 
-  - trigger: "neutro/cp"
+  - triggers: ["neutro/cp","neutro/c","n/cp"]
     replace: "neutropenia"
     propagate_case: true
     word: true

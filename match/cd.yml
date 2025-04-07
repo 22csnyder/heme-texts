@@ -1,0 +1,168 @@
+#cluster of differentiation
+# maybe I can avoid holding shift key so often and save my pinky finger
+# also, a good medium to organize & operationalize knowledge
+
+matches:
+
+  - trigger: "cd1a"
+    label: "CD1a"
+    replace: "CD1a"
+
+  - trigger: "cd79a"  
+    label: "CD79a"
+    replace: "CD79a"
+
+  - trigger: "CD11c"
+    label: "CD11c"
+    replace: "CD11c"
+
+  - trigger: "CD11b"
+    label: "CD11b"
+    replace: "CD11b"
+  
+  - triggers: ["cd11c"]
+    label: "CD11c"
+    replace: "CD11c"
+    # word: true
+  - triggers: ["cd25"]
+    label: "CD25"
+    replace: "CD25"
+    # word: true
+  - triggers: ["cd103"]
+    label: "CD103"
+    replace: "CD103"
+    # word: true
+  - triggers: ["cd103"]
+    label: "CD103"
+    replace: "CD103"
+    # word: true
+
+
+  - triggers: ["kappa"]
+    label: "Kappa"
+    replace: "Kappa"
+  - triggers: ["lambda"]
+    label: "Lambda"
+    replace: "Lambda"
+
+  - triggers: ["k/ish","k\\","k-ish", "ihc\\", "Kappa-ish", "kappa-ish"]
+    label: "Kappa-ISH"
+    replace: "Kappa-ISH"
+  - triggers: ["l/ish","l\\","l-ish", "ihc\\", "Lambda-ish", "lambda-ish"]
+    label: "Lambda-ISH"
+    replace: "Lambda-ISH"
+
+
+  - triggers: ["eber", "eber\\","e/ish","e-ish","eber-ish"]
+    label: "EBER-ISH"
+    replace: "EBER-ISH"
+
+  - triggers: ["cd34"]
+    label: "CD34"
+    replace: "CD34"
+
+  - triggers: ["cd38"]
+    label: "CD38"
+    replace: "CD38"
+
+  - triggers: ["cd45"]
+    label: "CD45"
+    replace: "CD45"
+    
+
+  - triggers: ["cd56"]
+    label: "CD56"
+    replace: "CD56"
+
+  - trigger: "cd59"
+    label: "CD59"
+    replace: "CD59"
+
+  - trigger: "cd55"
+    label: "CD55"
+    replace: "CD55"
+
+  - trigger: "cd55"
+    label: "CD55"
+    replace: "CD55"
+
+  - trigger: "flaer"
+    label: "FLAER (marker for flow cytometry)"
+    replace: "FLAER"
+
+    
+  - trigger: "cd19"
+    label: "CD19"
+    replace: "CD19"
+
+  - trigger: "cd20"
+    label: "CD20"
+    replace: "CD20"
+
+  - trigger: "cd21"
+    label: "CD21"
+    replace: "CD21"
+
+  - trigger: "cd22"
+    label: "CD22"
+    replace: "CD22"
+
+  - trigger: "cd23"
+    label: "CD23"
+    replace: "CD23"
+
+  - trigger: "cd24"
+    label: "CD24"
+    replace: "CD24"
+
+  - trigger: "cd25"
+    label: "CD25"
+    replace: "CD25"
+
+  - trigger: "cd26"
+    label: "CD26"
+    replace: "CD26"
+
+  - trigger: "cd27"
+    label: "CD27"
+    replace: "CD27"
+  
+
+  - trigger: "cd138"
+    label: "CD138"
+    replace: "CD138"
+
+  - trigger: "cd38"
+    label: "CD38"
+    replace: "CD38"
+    
+  
+  - trigger: "cd43"
+    label: "CD43"
+    replace: "CD43"
+
+  - trigger: "cd45"
+    label: "CD45"
+    replace: "CD45"
+
+  
+  - triggers: ["cd235","cd235a"]
+    label: "CD235a"
+    replace: "CD235a"
+
+  - trigger: "cd235"
+    label: "CD235"
+    replace: "CD235"
+
+  - trigger: "cd3"
+    label: "CD3"
+    replace: "CD3"
+
+  - triggers: ["ccd3","(c)cd3","cd3"]
+    label: "(c)CD3 - cytoplasmic CD3"
+    replace: "(c)CD3"
+
+  - trigger: "cd4"
+    label: "CD4"
+    replace: "CD4"
+    

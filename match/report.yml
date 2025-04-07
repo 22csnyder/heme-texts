@@ -29,19 +29,24 @@ matches:
     replace: "concern for "
     propagate_case: true
     word: true
+    # left_word: true #* which is better?
 
   - trigger: "c/w"
     replace: "consistent with"
     propagate_case: true
     word: true
 
-  - triggers: [":fc","\\fc","fc;"]
+
+
+
+  - triggers: ["fc;"]
     replace: "flow cytometry"
     propagate_case: true
 
   - trigger: "tlh;"
     replace: "trilineage hematopoiesis"
     propagate_case: true
+
   - trigger: "mth;"
     replace: "maturing trilineage hematopoiesis"
     propagate_case: true
@@ -51,10 +56,28 @@ matches:
     propagate_case: true
 
 
-  - trigger: "ab\\"
+  - trigger: "a/b"
     replace: "antibody"
+    word: true
+    propagate_case: true
 
-  - trigger: "ag\\"
+  #* NOTE: pluralize with 's inplace
+  - triggers: ["a//b", "a/b's","antibody's", "antibody/s"]
+    replace: 'antibodies'
+    propagate_case: true
+    word: true
+
+
+  - trigger: "a/g"
     replace: "antigen"
+    word: true
+    propagate_case: true
+
+  - trigger: "a//g"
+    replace: "antigens"
+    word: true
+    propagate_case: true
+
+    
 
 
