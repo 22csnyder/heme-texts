@@ -5,37 +5,6 @@ matches:
 ## General Medical ##
 # Phrases
 
-#TODO: regex for "37f" and replace with "The patient is a 37-year-old female "
-
-  # - trigger: ":pt"
-  #   replace: "The patient is a ***-year-old *** with ***"
-  #   propagate_case: true
-  
-  - trigger: "pt;"
-    replace: "the patient"
-    propagate_case: true
-
-  - trigger: "y/o"
-    replace: "year-old"
-    propagate_case: true
-    word: true
-
-  - trigger: "h/o"
-    replace: "history of"
-    propagate_case: true
-    word: true
-  
-  - trigger: "c/f"
-    replace: "concern for "
-    propagate_case: true
-    word: true
-    # left_word: true #* which is better?
-
-  - trigger: "c/w"
-    replace: "consistent with"
-    propagate_case: true
-    word: true
-
 
 
 

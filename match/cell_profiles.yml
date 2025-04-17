@@ -16,17 +16,16 @@ matches:
   - trigger: "immunoblastic;"
     label: "immunoblastic"
     replace: >
-      immunoblasts possess a 
+      Immunoblasts possess a 
       large round nucleus with 
       basophilic cytoplasm, variably vacuolated.
-      immunoblasts are actively dividing 
+      Immunoblasts are actively dividing 
           (ki-67 is positive in 90% of cells),
 
-      immunoblasts show positivitiy for 
-      B-cell activation markers (CD19,CD20,CD38) as well as 
-      CD138 as they differentiate into plasma cells
+      Immunoblasts show positivitiy for 
+      B-cell activation markers (CD19,CD20,CD38) as well as CD138. 
 
-      immunoblasts can be seen in Large B-cell lymphoma (LBCL) or 
+      Immunoblasts can be seen in Large B-cell lymphoma (LBCL) or 
       Burkitt lymphoma (BL)
 
 
