@@ -2,167 +2,131 @@
 # maybe I can avoid holding shift key so often and save my pinky finger
 # also, a good medium to organize & operationalize knowledge
 
+#Notes
+## first try at cd and marker regex
+## much needs tested
+
+# - I started using "left_word" because "," doesnt count as a word boundary
+
+#NOTE - it's sufficient to send cd# on left_word to CD# with # being a SINGLE digit, 
+# so CD235 becomes CD2 then type 35
+
+
 matches:
+  # Basic CD Formatting (preceeding the numeral)
+  - regex: "cd(?P<number>\\d)"
+    replace: "CD{{number}}"
+    left_word: true
+    label: "Convert cd# to CD# format"
 
-  - trigger: "cd1a"
-    label: "CD1a"
-    replace: "CD1a"
+  - regex: "c\\.cd(?P<number>\\d)"
+    replace: "(c)CD{{number}}"
+    left_word: true
+    label: "Convert c.cd# to (c)CD# format"
 
-  - trigger: "cd79a"  
-    label: "CD79a"
-    replace: "CD79a"
+  - regex: "s\\.cd(?P<number>\\d)"
+    replace: "(s)CD{{number}}"
+    left_word: true
+    label: "Convert s.cd# to (s)CD# format"
 
-  - trigger: "CD11c"
-    label: "CD11c"
-    replace: "CD11c"
 
-  - trigger: "CD11b"
-    label: "CD11b"
+  # Special CD Numbers with Multiple Letter Possibilities
+  # CD11
+    # it just happens b and c are the most common
+    # cursor: in general assume "a" is among the interesting possibilities
+  - trigger: "CD11"
     replace: "CD11b"
-  
-  - triggers: ["cd11c"]
-    label: "CD11c"
+    word: true
+
+  - trigger: "CD11"
     replace: "CD11c"
-    # word: true
-  - triggers: ["cd25"]
-    label: "CD25"
-    replace: "CD25"
-    # word: true
-  - triggers: ["cd103"]
-    label: "CD103"
-    replace: "CD103"
-    # word: true
-  - triggers: ["cd103"]
-    label: "CD103"
-    replace: "CD103"
-    # word: true
+    word: true
 
 
-  - triggers: ["kappa"]
-    label: "Kappa"
+  # CD235
+  - trigger: "CD235"
+    replace: "CD235a"
+    word: true
+
+
+  - trigger: "CD235"
+    replace: "CD235b"
+    word: true
+
+  # each one is slightly different
+  - trigger: "CD235"
+    replace: "CD235c"
+    word: true
+
+
+  # CD1
+  - trigger: "CD1"
+    replace: "CD1a"
+    word: true
+
+
+  # CD79
+  # just "a" is among possibilities
+  - trigger: "CD79"
+    replace: "CD79a"
+    word: true
+
+#TODO Test this section
+  # Light Chain Markers
+  - trigger: "kappa"
     replace: "Kappa"
-  - triggers: ["lambda"]
-    label: "Lambda"
-    replace: "Lambda"
+    word: true
 
-  - triggers: ["k/ish","k\\","k-ish", "ihc\\", "Kappa-ish", "kappa-ish"]
+  - trigger: "lambda"
+    replace: "Lambda"
+    word: true
+
+  - regex: "s\\.kappa"
+    replace: "Kappa"
+    left_word: true
+
+  - regex: "c\\.kappa"
+    replace: "(cy)Kappa"
+    left_word: true
+
+  - regex: "s\\.lambda"
+    replace: "Lambda"
+    left_word: true
+
+  - regex: "c\\.lambda"
+    replace: "(cy)Lambda"
+    left_word: true
+
+  - triggers: ["kappa, k/ish","k\\","k-ish", "ihc\\", "Kappa-ish", "kappa-ish"]
     label: "Kappa-ISH"
     replace: "Kappa-ISH"
-  - triggers: ["l/ish","l\\","l-ish", "ihc\\", "Lambda-ish", "lambda-ish"]
+    word: true
+
+  - triggers: ["lambda, l/ish","l\\","l-ish", "ihc\\", "Lambda-ish", "lambda-ish"]
     label: "Lambda-ISH"
     replace: "Lambda-ISH"
+    word: true
 
+
+# Other Named Markers and Reagents
 
   - triggers: ["eber", "eber\\","e/ish","e-ish","eber-ish"]
     label: "EBER-ISH"
     replace: "EBER-ISH"
-
-  - triggers: ["cd34"]
-    label: "CD34"
-    replace: "CD34"
-
-  - triggers: ["cd38"]
-    label: "CD38"
-    replace: "CD38"
-
-  - triggers: ["cd45"]
-    label: "CD45"
-    replace: "CD45"
-    
-
-  - triggers: ["cd56"]
-    label: "CD56"
-    replace: "CD56"
-
-  - trigger: "cd59"
-    label: "CD59"
-    replace: "CD59"
-
-  - trigger: "cd55"
-    label: "CD55"
-    replace: "CD55"
-
-  - trigger: "cd55"
-    label: "CD55"
-    replace: "CD55"
+    word: true
 
   - trigger: "flaer"
-    label: "FLAER (marker for flow cytometry)"
     replace: "FLAER"
+    word: true
+
+  - triggers: ["hladr", "hla-dr"]
+    replace: "HLA-DR"
+    word: true
 
     
-  - trigger: "cd19"
-    label: "CD19"
-    replace: "CD19"
+# BCL-X
 
-  - trigger: "cd20"
-    label: "CD20"
-    replace: "CD20"
-
-  - trigger: "cd21"
-    label: "CD21"
-    replace: "CD21"
-
-  - trigger: "cd22"
-    label: "CD22"
-    replace: "CD22"
-
-  - trigger: "cd23"
-    label: "CD23"
-    replace: "CD23"
-
-  - trigger: "cd24"
-    label: "CD24"
-    replace: "CD24"
-
-  - trigger: "cd25"
-    label: "CD25"
-    replace: "CD25"
-
-  - trigger: "cd26"
-    label: "CD26"
-    replace: "CD26"
-
-  - trigger: "cd27"
-    label: "CD27"
-    replace: "CD27"
-  
-
-  - trigger: "cd138"
-    label: "CD138"
-    replace: "CD138"
-
-  - trigger: "cd38"
-    label: "CD38"
-    replace: "CD38"
-    
-  
-  - trigger: "cd43"
-    label: "CD43"
-    replace: "CD43"
-
-  - trigger: "cd45"
-    label: "CD45"
-    replace: "CD45"
-
-  
-  - triggers: ["cd235","cd235a"]
-    label: "CD235a"
-    replace: "CD235a"
-
-  - trigger: "cd235"
-    label: "CD235"
-    replace: "CD235"
-
-  - trigger: "cd3"
-    label: "CD3"
-    replace: "CD3"
-
-  - triggers: ["ccd3","(c)cd3","cd3"]
-    label: "(c)CD3 - cytoplasmic CD3"
-    replace: "(c)CD3"
-
-  - trigger: "cd4"
-    label: "CD4"
-    replace: "CD4"
-    
+  - regex: "bcl-(?P<suffix>[a-z0-9]+)"
+    replace: "BCL-{{suffix|upper}}"
+    word: true
+    label: "Convert bcl-x to BCL-X format"
