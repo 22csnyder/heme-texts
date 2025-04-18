@@ -13,120 +13,43 @@
 
 
 matches:
-  # Basic CD Formatting (preceeding the numeral)
-  - regex: "cd(?P<number>\\d)"
+  # Basic CD Formatting
+  # Examples
+  #   eeecd45eee
+  #   CD45eee
+  #   eeeCD45
+  - regex: "\\bcd(?P<number>\\d+)\\b"
     replace: "CD{{number}}"
-    left_word: true
     label: "Convert cd# to CD# format"
+    # Usage examples:
+    # cd13   --> CD13
+    # (s)cd3   --> (s)CD3
+    # (cy)CD79a  --> (cy)CD79a
 
-  - regex: "c\\.cd(?P<number>\\d)"
-    replace: "(c)CD{{number}}"
-    left_word: true
-    label: "Convert c.cd# to (c)CD# format"
+    #core concept <-- matches on single number, doesn't care what comes after
 
-  - regex: "s\\.cd(?P<number>\\d)"
-    replace: "(s)CD{{number}}"
-    left_word: true
-    label: "Convert s.cd# to (s)CD# format"
-
-
-  # Special CD Numbers with Multiple Letter Possibilities
-  # CD11
-    # it just happens b and c are the most common
-    # cursor: in general assume "a" is among the interesting possibilities
-  - trigger: "CD11"
-    replace: "CD11b"
-    word: true
-
-  - trigger: "CD11"
-    replace: "CD11c"
-    word: true
-
-
-  # CD235
-  - trigger: "CD235"
-    replace: "CD235a"
-    word: true
-
-
-  - trigger: "CD235"
-    replace: "CD235b"
-    word: true
-
-  # each one is slightly different
-  - trigger: "CD235"
-    replace: "CD235c"
-    word: true
-
-
-  # CD1
-  - trigger: "CD1"
-    replace: "CD1a"
-    word: true
-
-
-  # CD79
-  # just "a" is among possibilities
-  - trigger: "CD79"
+  - trigger: "cd79"
     replace: "CD79a"
-    word: true
 
-#TODO Test this section
-  # Light Chain Markers
-  - trigger: "kappa"
-    replace: "Kappa"
-    word: true
-
-  - trigger: "lambda"
-    replace: "Lambda"
-    word: true
-
-  - regex: "s\\.kappa"
-    replace: "Kappa"
-    left_word: true
-
-  - regex: "c\\.kappa"
-    replace: "(cy)Kappa"
-    left_word: true
-
-  - regex: "s\\.lambda"
-    replace: "Lambda"
-    left_word: true
-
-  - regex: "c\\.lambda"
-    replace: "(cy)Lambda"
-    left_word: true
-
-  - triggers: ["kappa, k/ish","k\\","k-ish", "ihc\\", "Kappa-ish", "kappa-ish"]
-    label: "Kappa-ISH"
-    replace: "Kappa-ISH"
-    word: true
-
-  - triggers: ["lambda, l/ish","l\\","l-ish", "ihc\\", "Lambda-ish", "lambda-ish"]
-    label: "Lambda-ISH"
-    replace: "Lambda-ISH"
-    word: true
+    # Usage examples:
+    # cd79   --> CD79
+    # cd79a  --> CD79a
+    # cd79b  --> CD79b
 
 
-# Other Named Markers and Reagents
+  #   # Yes! as long as you make sure "(" and ")" are in default.yml as word_separators: variable
 
-  - triggers: ["eber", "eber\\","e/ish","e-ish","eber-ish"]
-    label: "EBER-ISH"
-    replace: "EBER-ISH"
-    word: true
+  # - trigger: cd13
+  #   replace: CD13
+  #   word: true
+  #   # testing ()
 
-  - trigger: "flaer"
-    replace: "FLAER"
-    word: true
-
-  - triggers: ["hladr", "hla-dr"]
-    replace: "HLA-DR"
-    word: true
-
-    
-# BCL-X
-
-  - regex: "bcl-(?P<suffix>[a-z0-9]+)"
-    replace: "BCL-{{suffix|upper}}"
-    word: true
-    label: "Convert bcl-x to BCL-X format"
+  # - trigger: "cd45:"
+  #   replace: "{{output}}"
+  #   vars:
+  #     - name: output
+  #       type: choice
+  #       params:
+  #         values:
+  #           - "CD45RO"
+  #           - "CD45RA"
