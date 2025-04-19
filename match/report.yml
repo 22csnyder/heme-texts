@@ -8,8 +8,10 @@ matches:
 
 
 
-  - triggers: ["fc;"]
+  - triggers: ["fc;", "flo\"]
     replace: "flow cytometry"
+    label: |
+      "flow cytometry"
     propagate_case: true
 
   - trigger: "tlh;"
@@ -27,14 +29,14 @@ matches:
 
   - trigger: "a/b"
     replace: "antibody"
-    word: true
+    # word: true
     propagate_case: true
 
   #* NOTE: pluralize with 's inplace
   - triggers: ["a//b", "a/b's","antibody's", "antibody/s"]
     replace: 'antibodies'
     propagate_case: true
-    word: true
+    # word: true
 
 
   - trigger: "a/g"

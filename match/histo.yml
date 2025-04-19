@@ -21,9 +21,10 @@ matches:
 ## ## Findings ## ##
 
 #alder-reilly
-  - trigger: "alder-reilly::"
+  - trigger: "::alder-reilly::"
     replace: "azurophilic granules, resembling toxic granulation in PMNs. Lymphocytes show metachromatic granules surrounded by a clear zone"
 
-  - trigger: "$GTBM|bm"
+  - trigger: "$GTBM"
     replace: "the marrow shows fat and hematopoietic atrophy with replacement by granular to fibrillar eosinophilic material in the interstitium, which is rich in hyaluronic acid and stains with Alcian blue at pH 2.5"
+    label: "Gelatinous transformation of bone marrow"
 

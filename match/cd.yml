@@ -13,23 +13,26 @@
 
 
 matches:
+
   # Basic CD Formatting
   # Examples
   #   eeecd45eee
   #   CD45eee
   #   eeeCD45
+  - regex: "(?i)cd79"
+    replace: "CD79a"
+
+
   - regex: "\\bcd(?P<number>\\d+)\\b"
     replace: "CD{{number}}"
     label: "Convert cd# to CD# format"
+    
     # Usage examples:
     # cd13   --> CD13
     # (s)cd3   --> (s)CD3
     # (cy)CD79a  --> (cy)CD79a
 
-    #core concept <-- matches on single number, doesn't care what comes after
-
-  - trigger: "cd79"
-    replace: "CD79a"
+    #core concept <-- fixes asap after first numeral
 
     # Usage examples:
     # cd79   --> CD79

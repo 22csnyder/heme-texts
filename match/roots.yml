@@ -3,11 +3,11 @@
 
 matches:
   - trigger: "cy/"
-    replace: ".cyto"
+    replace: "cyto"
     right_word: false
 
   - trigger: "cy\\"
-    replace: ".cyte"
+    replace: "cyte"
 #    right_word: true
 
   - trigger: "ey/"
