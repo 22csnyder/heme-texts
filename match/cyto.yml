@@ -1,3 +1,8 @@
+## Suggestion box
+# instead of trying to engineer languages most efficient construction, 
+# try providing chatgpt a list of abbrievs and asso, 
+# pass the text to chatgpt and ask it to return workable intelligble english
+
 
 matches:
 
@@ -194,7 +199,7 @@ matches:
     replace: "T-cell"
     propagate_case: true
 
-  - triggers: ["ec\\", "ery\\"]
+  - triggers: ["ec\\", "ery\\", "ey\\"]
     replace: "erythrocyte"
     propagate_case: true
 

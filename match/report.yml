@@ -8,7 +8,7 @@ matches:
 
 
 
-  - triggers: ["fc;", "flo\"]
+  - triggers: ["fc;", "flo\\"]
     replace: "flow cytometry"
     label: |
       "flow cytometry"

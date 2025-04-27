@@ -27,7 +27,8 @@ matches:
   - trigger: "$BPDCN"
     replace: "Blastic plasmacytoid dendritic cell neoplasm"
 
-  - trigger: "$PBL"
+  # - trigger: "$PBL"
+  - trigger: "PBL*"
     replace: "Plasmablastic lymphoma"
     word: true
 
