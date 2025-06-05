@@ -2,6 +2,15 @@
 # For descriptions and char of unicellular types. 
 
 matches:
+#Flow cytometry immunophenotype
+
+#HCL ag => #CD11c, CD25, and CD103,  # ignore
+  - triggers: ["hairy;","$HCL.pheno;","pheno\\","hcl;","bcell;"]
+    label: "hairy cell leukemia immunophenotype"
+    replace: "CD11c, CD25, and CD103"
+    
+
+
   - trigger: "RS/c"
     label: "Reed Sternberg Cell (RS Cell)"
     replace: "Reed Sternberg Cell"

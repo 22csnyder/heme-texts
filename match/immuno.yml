@@ -27,3 +27,28 @@ matches:
     label: "immunoglobulin"
     word: true
     propagate_case: true
+
+
+  - trigger: "a/b"
+    replace: "antibody"
+    # word: true
+    propagate_case: true
+
+  #* NOTE: pluralize with 's inplace
+  - triggers: ["a//b", "a/b's","antibody's", "antibody/s"]
+    replace: 'antibodies'
+    propagate_case: true
+    # word: true
+
+
+  - trigger: "a/g"
+    replace: "antigen"
+    word: true
+    propagate_case: true
+
+  - trigger: "a//g"
+    replace: "antigens"
+    word: true
+    propagate_case: true
+
+    

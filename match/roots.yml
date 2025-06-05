@@ -13,16 +13,36 @@ matches:
   - trigger: "ey/"
     replace: "erythro"
 
+
   - trigger: "ly/"
     replace: "lympho"
 
   - trigger: "ly\\"
     replace: "lymph"
 
+  - trigger: "l/c"
+    replace: "lymphocyte"
+    propagate_case: true
+    word: true
 
-  - trigger: "pc\\"
+  - trigger: "lc\\"
+    replace: "lymphocyte"
+    propagate_case: true
+
+  - triggers: ["pc\\", "pc:"]
     replace: "plasma cell"
+    propagate_case: true
+    word: true
 
-  - trigger: "pc/"
+  - triggers: [ "p/c"]
+    replace: "plasma cell"
+    propagate_case: true
+    word: true
+
+
+  - trigger: "pc::"
     replace: "plasmacytic"
+    propagate_case: true
+    word: true
+
 
