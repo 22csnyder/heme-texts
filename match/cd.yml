@@ -42,9 +42,9 @@ matches:
 
   #   # Yes! as long as you make sure "(" and ")" are in default.yml as word_separators: variable
 
-  # - trigger: cd13
-  #   replace: CD13
-  #   word: true
+  - trigger: cd13
+    replace: CD13
+    word: true
   #   # testing ()
 
   # - trigger: "cd45:"

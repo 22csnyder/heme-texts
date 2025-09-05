@@ -7,7 +7,7 @@ matches:
 
 #cellularity, histology
 
-  - triggers: ["hypo/c","h/c","h\\c","h|c"]
+  - triggers: ["hypo/c","h/c","h\\c","h|c",ccp]
     replace: "hypocellular"
     propagate_case: true
     word: true
