@@ -1,5 +1,12 @@
 #ignore env
 .env
+
+#API KEYS
+API_KEY-*
+API_KEY_*
+*API_KEY*
+
+#reference files
 .reference/
 
 #just for inspect
