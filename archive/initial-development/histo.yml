@@ -1,0 +1,31 @@
+## ## -- Histology -- ## ##
+
+
+matches:
+
+## ## Descriptors ## ##
+
+#cellularity, histology
+
+  - triggers: ["hypo/c","h/c","h\\c","h|c",ccp]
+    replace: "hypocellular"
+    propagate_case: true
+    word: true
+
+  - triggers: ["hyper/c","h//c"      ,"h||c"]
+    replace: "hypercellular"
+    propagate_case: true
+    word: true
+
+
+## ## Findings ## ##
+
+#alder-reilly
+  - trigger: "::alder-reilly::"
+    replace: "azurophilic granules, resembling toxic granulation in PMNs. Lymphocytes show metachromatic granules surrounded by a clear zone"
+    label: "Alder-Reilly"
+
+  - trigger: "$GTBM"
+    replace: "the marrow shows fat and hematopoietic atrophy with replacement by granular to fibrillar eosinophilic material in the interstitium, which is rich in hyaluronic acid and stains with Alcian blue at pH 2.5"
+    label: "Gelatinous transformation of bone marrow"
+

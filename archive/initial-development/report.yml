@@ -1,0 +1,30 @@
+
+matches:
+
+
+## General Medical ##
+# Phrases
+
+
+
+
+  - triggers: ["fcm;", "flo\\"]
+    replace: "flow cytometry"
+    label: |
+      "flow cytometry"
+    propagate_case: true
+
+  - trigger: "tlh;"
+    replace: "trilineage hematopoiesis"
+    propagate_case: true
+
+  - trigger: "mth;"
+    replace: "maturing trilineage hematopoiesis"
+    propagate_case: true
+
+  - trigger: "nib;"
+    replace: "no increase in blasts"
+    propagate_case: true
+
+
+

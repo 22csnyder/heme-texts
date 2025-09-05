@@ -1,92 +1,103 @@
-#spanso completions for WHO / ICC haem diagnoses
-# $ signfies start of diag acronym for now
+# Diagnostic abbreviations and terms
+# Clean, focused version for new chapter
 
 matches:
-  - trigger: "$PNH"
-    replace: "Paroxysmal nocturnal hemoglobinuria"
-    propagate_case: true
-
-  - trigger: "$PCH"
-    replace: "Paroxysmal cold hemoglobinuria"
-    
-  - trigger: "$AATD"
-    replace: "Alpha-1 antitrypsin (AAT) deficiency"
-
-  - trigger: "$ATLL"
-    replace: "adult t/c lymphoma"
-    #propagate_case: true
-
-  - trigger: "$PTCL"
-    replace: "peripheral T-cell lymphoma" 
-    propagate_case: true
-
-  - trigger: "$ALCL"
-    replace: "Anaplastic large cell lymphoma"
-    
-
-  - trigger: "$BPDCN"
-    replace: "Blastic plasmacytoid dendritic cell neoplasm"
-
-  # - trigger: "$PBL"
-  - trigger: "PBL*"
-    replace: "Plasmablastic lymphoma"
+  - trigger: "pt;"
+    replace: "the patient"
     word: true
 
-
-# TODO nest these two to avoid redundancy
-#
-  - trigger: "$PBL.monomorphic"
-    replace: "Monomorphic Plasmablastic lymphoma"
+  - trigger: "pt"
+    replace: "patient"
     word: true
 
-  - trigger: "$PBL.plasmacytic"
-    replace: "Plasmablastic lymphoma with plasmacytic differentiation"
+  - trigger: "c/o"
+    replace: "complains of"
     word: true
 
-  - trigger: "$PBL.\\"
-    replace: "Monomorphic Plasmablastic lymphoma"
-    label: monomorphic
-
-  - trigger: "$PBL."
-    replace: "Monomorphic Plasmablastic lymphoma"
-    label: monomorphic
+  - trigger: "sx"
+    replace: "symptoms"
     word: true
 
-  - trigger: $PBL.monomorphic.hist()
-    replace: >
-      diffuse and cohesive proliferation of 
-      immunoblasts or large cells with 
-      no or minimal morphologic plasma cell differentiation
-
-
-  - trigger: "$PBL.\\"
-    replace: "Plasmablastic lymphoma with plasmacytic differentiation"
-    label: plasmacytic
-
-  - trigger: "$PBL."
-    replace: "Plasmablastic lymphoma with plasmacytic differentiation"
-    label: plasmacytic
+  - trigger: "hx"
+    replace: "history"
     word: true
 
+  - trigger: "y/o"
+    replace: "year old"
+    word: true
 
-#ALK+ LBCL
+  - trigger: "h/o"
+    replace: "history of"
+    word: true
 
-  - trigger: "$LBCL"
-    replace: "Large B-cell Lymphoma"
-    #word: true
+  - trigger: "c/f"
+    replace: "concern for"
+    word: true
 
-  - trigger: "$LBCL"
-    replace: "ALK+ Large B-cell Lymphoma"
-    #word: true
+  - trigger: "c/w"
+    replace: "consistent with"
+    word: true
 
-  - trigger: "$LBCL"
-    replace: "ALK- Large B-cell Lymphoma"
-    #word: true
+  - trigger: "s/p"
+    replace: "status post"
+    word: true
 
+  - trigger: "r/o"
+    replace: "rule out"
+    word: true
 
+  - trigger: "d/c"
+    replace: "discontinue"
+    word: true
 
+  - trigger: "w/u"
+    replace: "workup"
+    word: true
 
+  - trigger: "b/l"
+    replace: "bilateral"
+    word: true
 
-#castlemans
-  - trigger: "castleman::plasma cell"
-    replace: "large sheets of mature, polytypic plasma cells in the interfollicular areas and medulla"
+  - trigger: "n/v"
+    replace: "nausea and vomiting"
+    word: true
+
+  - trigger: "n/k/a"
+    replace: "no known allergies"
+    word: true
+
+  - trigger: "n/k/f"
+    replace: "no known family history"
+    word: true
+
+  - trigger: "h/p"
+    replace: "history and physical"
+    word: true
+
+  - trigger: "a/w"
+    replace: "associated with"
+    word: true
+
+  - trigger: "i/l"
+    replace: "involving"
+    word: true
+
+  - trigger: "f/u"
+    replace: "follow-up"
+    word: true
+
+  - trigger: "o/e"
+    replace: "on examination"
+    word: true
+
+  - trigger: "w/o"
+    replace: "without"
+    word: true
+
+  - trigger: "t/f"
+    replace: "transferred from"
+    word: true
+
+  - trigger: "osh"
+    replace: "outside hospital"
+    word: true

@@ -1,0 +1,43 @@
+# Cellular morphology in peripheral blood
+
+
+# Normal pbnormal
+# CBC data from [date] shows WBC-X K/cumm, hemoglobin-X g/dL, hematocrit-X%, platelets-X K/cumm, MCV-X fL, RDW CV-X%.
+# Microscopic examination of the Wright-Giemsa stained peripheral blood smear shows normocytic and normochromic red blood cells. Leukocytes are normal in number and predominantly normal in morphology. No significant population of circulating blasts or atypical lymphoid cells identified. Platelets are normal in number and predominantly normal in morphology.
+# A 100-cell differential count on peripheral blood shows …
+# Flow cytometry analysis of the peripheral blood shows…
+
+
+
+# Pancytopenia pbpancytopenia
+# CBC data from [date] shows WBC-X K/cumm, hemoglobin-X g/dL, hematocrit-X%, platelets-X K/cumm, MCV-X fL, RDW CV-X%.
+# Microscopic examination of the Wright-Giemsa stained peripheral blood smear shows normocytic/macrocytic/microcytic anemia with anisocytosis/anisopoikilocytosis. Leukocytes are mildly/moderately/markedly decreased with absolute neutropenia. No significant population of circulating blasts or atypical lymphoid cells identified. Platelets are mildly/moderately/markedly decreased and predominantly normal in morphology/include larger forms.
+# A 100-cell differential count on peripheral blood shows …
+# Flow cytometry analysis of the peripheral blood shows…
+
+# Myeloid left-shift pbleftshift
+# CBC data from [date] shows WBC-X K/cumm, hemoglobin-X g/dL, hematocrit-X%, platelets-X K/cumm, MCV-X fL, RDW CV-X%.
+# Microscopic examination of the Wright-Giemsa stained peripheral blood smear shows normocytic RBCs/anemia with anisocytosis/anisopoikilocytosis.  Leukocytes are normal/increased in number with relative/absolute neutrophila and myeloid left-shift including occasional blasts/with no significant blast population identified. Platelets are normal/increased/decreased in number and predominantly normal in morphology.
+# A 100-cell differential count on peripheral blood shows …
+# Flow cytometry analysis of the peripheral blood shows…
+
+
+# Increased blasts pbblasts
+# CBC data from [date] shows WBC-X K/cumm, hemoglobin-X g/dL, hematocrit-X%, platelets-X K/cumm, MCV-X fL, RDW CV-X%.
+# Microscopic examination of the Wright-Giemsa stained peripheral blood smear shows normocytic/macrocytic anemia with anisocytosis/anisopoikilocytosis. Leukocytes are normal/increased/decreased in number with occasional/scattered/frequent circulating blasts. Platelets are normal/increased/decreased in number and predominantly normal in morphology/include larger forms.
+# A 100-cell differential count on peripheral blood shows …
+# Flow cytometry analysis of the peripheral blood shows…
+
+
+matches:
+#pbcll
+  - triggers: ["bcell;","cll;","$CLL.pbl\\","pbl;","pbcll;"]
+    label: "CLL cellular morphology in peripheral blood"
+    replace: >
+      small mature-appearing lymphocytes with round nuclear contours, condensed chromatin and indistinct nucleoli. Scattered prolymphocytes are present but not significantly increased. Smudge cells are present. 
+
+  #pbsezarypos
+  - triggers: ["bcell;","sez;","$SEZ.pbl;","pbl;","pbsezaryneg;"]
+    label: "SEZ cellular morphology in peripheral blood"
+    replace: >
+      Leukocytes are normal/increased/decreased in number with absolute/relative lymphocytosis including larger atypical lymphocytes with convoluted nuclear contours. 

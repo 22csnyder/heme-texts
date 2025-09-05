@@ -1,0 +1,229 @@
+## Suggestion box
+# instead of trying to engineer languages most efficient construction, 
+# try providing chatgpt a list of abbrievs and asso, 
+# pass the text to chatgpt and ask it to return workable intelligble english
+
+
+matches:
+
+
+## Counting Descriptors ##
+# Each Cell type, presence or absence
+
+
+  - triggers: ["lymph/cp","lym/cp","y/cp"]
+    replace: "lymphopenia"
+    propagate_case: true
+    word: true
+  - triggers: ["lymph/cs","lym/cs","y/cs"]
+    replace: "lymphocytosis"
+    propagate_case: true
+    word: true
+  - triggers: ["lymph/c","lym/c","y/c"]
+    replace: "lymphocyte"
+    propagate_case: true
+    word: true
+
+  - triggers: ["thrombo/cp","plt/cp","p/cp","t/cp"]
+    replace: "thrombocytopenia"
+    propagate_case: true
+    word: true
+  - triggers: ["thrombo/cs","plt/cs","p/cs","t/cs"]
+    replace: "thrombocytosis"
+    propagate_case: true
+    word: true
+  - triggers: ["plt/c","thrombo/c","p/c","t/c"]
+    replace: "platelet"
+    propagate_case: true
+    word: true
+
+  - trigger: "leuk/cp"
+    replace: "leukocytopenia"
+    propagate_case: true
+    word: true
+  - trigger: "leuk/cs"
+    replace: "leukocytosis"
+    propagate_case: true
+    word: true
+  - triggers: ["leuk/c","leu/c","l/c"]
+    replace: "leukocyte"
+    propagate_case: true
+    word: true
+
+  - triggers: ["neutro/cp","neutro/c","n/cp"]
+    replace: "neutropenia"
+    propagate_case: true
+    word: true
+
+  - triggers: ["neu/cs","neutro/cs","n/cs"]
+    replace: "neutrophilia"
+    propagate_case: true
+    word: true
+  - triggers: ["neu/c","neutro/c","n/c"]
+    replace: "neutrophil"
+    propagate_case: true
+    word: true
+
+  - triggers: ["mono/cp","m/cp"]
+    replace: "monocytopenia"
+    propagate_case: true
+    word: true
+
+  - triggers: ["mono/cs","m/cs"]
+    replace: "monocytosis"
+    propagate_case: true
+    word: true
+  - triggers: ["mono/c","m/c"]
+    replace: "monocyte"
+    propagate_case: true
+    word: true
+
+  - trigger: "eos/cs"
+    replace: "eosinophilia"
+    propagate_case: true
+    word: true
+  - trigger: "eos/c"
+    replace: "eosinophil"
+    propagate_case: true
+    word: true
+
+  - triggers: ["erythro/cs","ery/cs","e/cs"]
+    replace: "erythrocytosis"
+    propagate_case: true
+    word: true
+
+  - triggers: ["erythro/cp","ery/cp","e/cp"]
+    replace: "erythrocytopenia"
+    propagate_case: true
+    word: true
+
+  - trigger: "erythro/c"
+    replace: "erythrocyte"
+    propagate_case: true
+    word: true
+
+  - triggers: ["erythro/cp","ery/cp","e/cp"]
+    replace: "anemia"
+    propagate_case: true
+    word: true
+
+  - triggers: ["erythro/cs","ery/cs","e/cs"]
+    replace: "polycythemia"
+    propagate_case: true
+    word: true
+
+  - triggers: ["m6/c","M6/c","mega/c","Mega/c","megakaryo/c","6/c"]
+    replace: "megakaryocyte"
+    propagate_case: true
+    word: true
+
+  - trigger: "baso/cs"
+    replace: "basophilia"
+    propagate_case: true
+    word: true
+
+  - trigger: "baso/c"
+    replace: "basophil"
+    propagate_case: true
+    word: true
+
+  - triggers: ["bo\\", "bas\\","baso\\"]
+    replace: "basophil"
+    propagate_case: true
+
+  - triggers: ["pc/cs","plasma/cs"]
+    replace: "plasmacytosis"
+    propagate_case: true
+    word: true
+
+  - trigger: "plasma/c"
+    replace: "plasma cell"
+    propagate_case: true
+    word: true
+
+
+
+
+  - trigger: "t/c"
+    replace: "T-cell"
+    propagate_case: true
+    word: true
+
+  - trigger: "b/c"
+    replace: "B-cell"
+    propagate_case: true
+    word: true
+    
+  - triggers: ["b/cs","B-cell/ycs"]
+    replace: "B-cell lymphocytosis"
+    propagate_case: true
+    word: true
+
+  - triggers: ["tc/ycs","T-cell/ycs"]
+    replace: "T-cell lymphocytosis"
+    propagate_case: true
+    word: true
+
+  - triggers: ["tc/ycp","T-cell/ycp"]
+    replace: "T-cell lymphocytopenia"
+    propagate_case: true
+    word: true
+    
+    
+#- Alternative triggers for cytopenia and cytosis -#
+
+  - trigger: ".tcp"
+    replace: "thrombocytopenia"
+    propagate_case: true
+  - trigger: "tcp;"
+    replace: "thrombocytopenia"
+    propagate_case: true
+  - trigger: "\\tcp"
+    replace: "thrombocytopenia"
+    propagate_case: true
+
+  - triggers: ["\\tcs","tcs;","\\pcs"]
+    replace: "thrombocytosis"
+    propagate_case: true
+
+
+  - triggers: ["bc\\"]
+    replace: "B-cell"
+    propagate_case: true
+
+  - triggers: ["tc\\"]
+    replace: "T-cell"
+    propagate_case: true
+
+  - triggers: ["t-\\","tc\\","t-c","tc:"]
+    replace: "T-cell"
+    propagate_case: true
+
+  - triggers: ["ec\\", "ery\\", "ey\\"]
+    replace: "erythrocyte"
+    propagate_case: true
+
+  - trigger: "mo\\"
+    replace: "monocyte"
+    propagate_case: true
+
+  - triggers: ["lymph/c","ly\\", "lyc\\", "yc\\"]
+    replace: "lymphocyte"
+    propagate_case: true
+
+  - triggers: ["eos\\", "eo\\"]
+    replace: "eosinophil"
+    propagate_case: true
+
+  - trigger: "\\ncs"
+    replace: "neutrophilia"
+    propagate_case: true
+    
+  - trigger: "\\ycp"
+    replace: "lymphocytopenia"
+    propagate_case: true
+    # word: true
+  - trigger: "\\ycs"
+    replace: "lymphocytosis"
+    propagate_case: true
+    # word: true

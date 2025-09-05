@@ -1,0 +1,20 @@
+#same idea as with cd markers and ihcs
+#spellcheck of convenience
+
+
+matches:
+
+  - trigger: "tp53"
+    replace: "TP53"
+    # word: true
+
+  #Cyclin D1 is a protein that in humans is encoded by the CCND1 gene.
+  - trigger: ccnd1
+    replace: CCND1
+    label: "Convert ccnd1 to CCND1"
+    # word: true
+
+  #c-Myc is a protein that in humans is encoded by the MYC gene.
+  - trigger: "myc"
+    replace: "MYC"
+    left_word: true

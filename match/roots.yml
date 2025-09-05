@@ -1,48 +1,59 @@
-# This file is for the components of words like "lymph" or "cyte"
-# ; not sure if it will be worth it or should build bigger scale macros
+# Root words and basic medical terminology
+# Clean, focused version for new chapter
 
 matches:
-  - trigger: "cy/"
-    replace: "cyto"
-    right_word: false
-
-  - trigger: "cy\\"
-    replace: "cyte"
-#    right_word: true
-
-  - trigger: "ey/"
-    replace: "erythro"
-
-
-  - trigger: "ly/"
-    replace: "lympho"
-
-  - trigger: "ly\\"
-    replace: "lymph"
-
-  - trigger: "l/c"
-    replace: "lymphocyte"
-    propagate_case: true
+  - trigger: "igg"
+    replace: "IgG"
     word: true
 
-  - trigger: "lc\\"
-    replace: "lymphocyte"
-    propagate_case: true
-
-  - triggers: ["pc\\", "pc:"]
-    replace: "plasma cell"
-    propagate_case: true
+  - trigger: "igm"
+    replace: "IgM"
     word: true
 
-  - triggers: [ "p/c"]
-    replace: "plasma cell"
-    propagate_case: true
+  - trigger: "igd"
+    replace: "IgD"
     word: true
 
-
-  - trigger: "pc::"
-    replace: "plasmacytic"
-    propagate_case: true
+  - trigger: "iga"
+    replace: "IgA"
     word: true
 
+  - trigger: "i/g"
+    replace: "immunoglobulin"
+    word: true
 
+  - trigger: "a/b"
+    replace: "antibody"
+    word: true
+
+  - trigger: "a//b"
+    replace: "antibodies"
+    word: true
+
+  - trigger: "a/b's"
+    replace: "antibodies"
+    word: true
+
+  - trigger: "antibody's"
+    replace: "antibodies"
+    word: true
+
+  - trigger: "antibody/s"
+    replace: "antibodies"
+    word: true
+
+  - trigger: "a/g"
+    replace: "antigen"
+    word: true
+
+  - trigger: "a//g"
+    replace: "antigens"
+    word: true
+
+  - trigger: "fc;"
+    replace: "flow cytometry"
+    word: true
+
+  - trigger: "flo\\"
+    replace: "flow cytometry"
+    word: true

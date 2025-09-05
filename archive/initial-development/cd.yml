@@ -1,0 +1,58 @@
+#cluster of differentiation
+# maybe I can avoid holding shift key so often and save my pinky finger
+# also, a good medium to organize & operationalize knowledge
+
+#Notes
+## first try at cd and marker regex
+## much needs tested
+
+# - I started using "left_word" because "," doesnt count as a word boundary
+
+#NOTE - it's sufficient to send cd# on left_word to CD# with # being a SINGLE digit, 
+# so CD235 becomes CD2 then type 35
+
+
+matches:
+
+  # Basic CD Formatting
+  # Examples
+  #   eeecd45eee
+  #   CD45eee
+  #   eeeCD45
+  - regex: "(?i)cd79"
+    replace: "CD79a"
+
+
+  - regex: "\\bcd(?P<number>\\d+)\\b"
+    replace: "CD{{number}}"
+    label: "Convert cd# to CD# format"
+    
+    # Usage examples:
+    # cd13   --> CD13
+    # (s)cd3   --> (s)CD3
+    # (cy)CD79a  --> (cy)CD79a
+
+    #core concept <-- fixes asap after first numeral
+
+    # Usage examples:
+    # cd79   --> CD79
+    # cd79a  --> CD79a
+    # cd79b  --> CD79b
+
+
+  #   # Yes! as long as you make sure "(" and ")" are in default.yml as word_separators: variable
+
+  - trigger: cd13
+    replace: CD13
+    word: true
+  #   # testing ()
+
+  # - trigger: "cd45:"
+  #   replace: "{{output}}"
+  #   vars:
+  #     - name: output
+  #       type: choice
+  #       params:
+  #         values:
+  #           - "CD45RO"
+  #           - "CD45RA"

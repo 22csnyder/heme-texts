@@ -1,0 +1,92 @@
+#spanso completions for WHO / ICC haem diagnoses
+# $ signfies start of diag acronym for now
+
+matches:
+  - trigger: "$PNH"
+    replace: "Paroxysmal nocturnal hemoglobinuria"
+    propagate_case: true
+
+  - trigger: "$PCH"
+    replace: "Paroxysmal cold hemoglobinuria"
+    
+  - trigger: "$AATD"
+    replace: "Alpha-1 antitrypsin (AAT) deficiency"
+
+  - trigger: "$ATLL"
+    replace: "adult t/c lymphoma"
+    #propagate_case: true
+
+  - trigger: "$PTCL"
+    replace: "peripheral T-cell lymphoma" 
+    propagate_case: true
+
+  - trigger: "$ALCL"
+    replace: "Anaplastic large cell lymphoma"
+    
+
+  - trigger: "$BPDCN"
+    replace: "Blastic plasmacytoid dendritic cell neoplasm"
+
+  # - trigger: "$PBL"
+  - trigger: "PBL*"
+    replace: "Plasmablastic lymphoma"
+    word: true
+
+
+# TODO nest these two to avoid redundancy
+#
+  - trigger: "$PBL.monomorphic"
+    replace: "Monomorphic Plasmablastic lymphoma"
+    word: true
+
+  - trigger: "$PBL.plasmacytic"
+    replace: "Plasmablastic lymphoma with plasmacytic differentiation"
+    word: true
+
+  - trigger: "$PBL.\\"
+    replace: "Monomorphic Plasmablastic lymphoma"
+    label: monomorphic
+
+  - trigger: "$PBL."
+    replace: "Monomorphic Plasmablastic lymphoma"
+    label: monomorphic
+    word: true
+
+  - trigger: $PBL.monomorphic.hist()
+    replace: >
+      diffuse and cohesive proliferation of 
+      immunoblasts or large cells with 
+      no or minimal morphologic plasma cell differentiation
+
+
+  - trigger: "$PBL.\\"
+    replace: "Plasmablastic lymphoma with plasmacytic differentiation"
+    label: plasmacytic
+
+  - trigger: "$PBL."
+    replace: "Plasmablastic lymphoma with plasmacytic differentiation"
+    label: plasmacytic
+    word: true
+
+
+#ALK+ LBCL
+
+  - trigger: "$LBCL"
+    replace: "Large B-cell Lymphoma"
+    #word: true
+
+  - trigger: "$LBCL"
+    replace: "ALK+ Large B-cell Lymphoma"
+    #word: true
+
+  - trigger: "$LBCL"
+    replace: "ALK- Large B-cell Lymphoma"
+    #word: true
+
+
+
+
+
+#castlemans
+  - trigger: "castleman::plasma cell"
+    replace: "large sheets of mature, polytypic plasma cells in the interfollicular areas and medulla"

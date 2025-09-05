@@ -1,0 +1,452 @@
+matches:
+
+
+## - Mature B-cell Flow Cytometry - ##
+
+# New CLL/SLL in PB or BM cll
+# Specimen quality:
+# Flow cytometry identifies an immunophenotypically abnormal B-cell population consistent with a chronic lymphocytic leukemia immunophenotype comprising % of total cellular events. Of the CD19+ B-lymphoid cells, % have increased forward scatter characteristics indicative of larger cell volume or size.
+# Antigens expressed are: 
+# Antigens not expressed are:
+# CD3+ T-lymphocytes show no pan T cell antigen aberrancies and have a CD4 to CD8 ratio within normal limits. Natural killer cells are not increased. Plasma cells are not overtly increased. No significant CD45 dim population is identified. CD34+ blasts are not increased.
+# This immunophenotype is most consistent with chronic lymphocytic leukemia / small lymphocytic lymphoma (CLL/SLL). However, a definitive diagnosis of CLL/SLL using current WHO criteria requires the demonstration of disease related clinical and laboratory findings and/or the presence of >5,000 neoplastic cells per microliter in the peripheral blood. Therefore, correlation with morphology (if submitted), clinical, laboratory, and genetic data is recommended for final diagnosis and classification.
+# A Wright-Giemsa stained cytospin from the flow cytometry specimen was examined for internal quality control purposes.
+  - triggers: ["cll;","sll;","fc.bcell;","cd5\\"]
+    label: "ccl/sll flow cytometry"
+    replace: |
+      {{:specimen_adequate_text}}
+
+      Flow cytometry identifies an immunophenotypically abnormal B-cell population consistent with a chronic lymphocytic leukemia immunophenotype comprising $|$% of total cellular events. Of the CD19+ B-lymphoid cells, $|$% have increased forward scatter characteristics indicative of larger cell volume or size.
+      
+      Antigens expressed:
+      Antigens not expressed:
+      CD3+ T-lymphocytes show no pan T cell antigen aberrancies and have a CD4 to CD8 ratio within normal limits. Natural killer cells are not increased. Plasma cells are not overtly increased. No significant CD45 dim population is identified. CD34+ blasts are not increased.
+      
+      This immunophenotype is most consistent with chronic lymphocytic leukemia / small lymphocytic lymphoma (CLL/SLL). However, a definitive diagnosis of CLL/SLL using current WHO criteria requires the demonstration of disease related clinical and laboratory findings and/or the presence of >5,000 neoplastic cells per microliter in the peripheral blood. Therefore, correlation with morphology (if submitted), clinical, laboratory, and genetic data is recommended for final diagnosis and classification.
+
+      {{:cytospin_text}}
+
+    # {{Bbilling;}}
+
+
+
+#  mantle cell lymphoma mantle
+# Specimen quality:
+# Flow cytometry identifies an immunophenotypically abnormal CD5+ B-cell population consistent with a mantle cell lymphoma immunophenotype comprising % of total cellular events.
+# Other antigens expressed:
+# Antigens not expressed:
+# CD3+ T-lymphocytes show no pan T cell antigen aberrancies and have a CD4 to CD8 ratio within normal limits. Natural killer cells are not increased. Plasma cells are not overtly increased. No significant CD45 dim population is identified. CD34+ blasts are not increased.
+# Correlation with morphology (if submitted), clinical and laboratory data is recommended for final diagnosis and classification. Furthermore, FISH studies for t(11;14) and/or immunohistochemistry for cyclin D1 are recommended to confirm the diagnosis of mantle cell lymphoma.
+# A Wright-Giemsa stained cytospin from the flow cytometry specimen was examined for internal quality control purposes.  
+
+  - triggers: ["mantle;","MCL;","fc.bcell;","fc.mcl;","cd5\\"]
+    label: "mantle cell lymphoma flow cytometry"
+    replace: |
+      {{:specimen_adequate_text}}
+      
+      Flow cytometry identifies an immunophenotypically abnormal CD5+ B-cell population consistent with a mantle cell lymphoma immunophenotype comprising $|$% of total cellular events.
+      
+      Other antigens expressed:
+      Antigens not expressed:
+      CD3+ T-lymphocytes show no pan T cell antigen aberrancies and have a CD4 to CD8 ratio within normal limits. Natural killer cells are not increased. Plasma cells are not overtly increased. No significant CD45 dim population is identified. CD34+ blasts are not increased.
+
+      Correlation with morphology (if submitted), clinical and laboratory data is recommended for final diagnosis and classification. Furthermore, FISH studies for t(11;14) and/or immunohistochemistry for cyclin D1 are recommended to confirm the diagnosis of mantle cell lymphoma.
+
+      {{:cytospin_text}}
+
+    # {{Bbilling;}}
+      
+#  CD10+ B-cell lymphoma (CPT code: 88189) cd10
+# Specimen quality:
+# Flow cytometry identifies an immunophenotypically abnormal CD10+ B-cell population of germinal center origin comprising % of total cellular events. Of the CD19+ B-lymphoid cells, % have increased forward scatter characteristics indicative of larger cell volume or size.
+# Other antigens expressed:
+# Antigens not expressed: 
+# CD3+ T-lymphocytes show no pan T cell antigen aberrancies and have a CD4 to CD8 ratio within normal limits. Natural killer cells are not increased. Plasma cells are not overtly increased. No significant CD45 dim population is identified. CD34+ blasts are not increased.
+# Differential diagnostic considerations include follicular lymphoma, diffuse large B-cell lymphoma, Burkitt lymphoma, or possibly, double-hit lymphoma. Correlation with morphology (if submitted), clinical and laboratory data is recommended for final diagnosis and classification. Furthermore, FISH studies for t(14;18), c-MYC and BCL-6 translocations are recommended.
+# A Wright-Giemsa stained cytospin from the flow cytometry specimen was examined for internal quality control purposes.
+
+  - triggers: ["follicular;","burkitt;","dlbcl;","cd10;","fc.bcell;","fc.cd10;","cd10\\"]
+    label: "CD10+ B-cell lymphoma flow cytometry"
+    replace: |
+      {{:specimen_adequate_text}} 
+      
+      Flow cytometry identifies an immunophenotypically abnormal CD10+ B-cell population of germinal center origin comprising % of total cellular events. Of the CD19+ B-lymphoid cells, % have increased forward scatter characteristics indicative of larger cell volume or size.
+
+      Other antigens expressed:
+      Antigens not expressed:
+
+      CD3+ T-lymphocytes show no pan T cell antigen aberrancies and have a CD4 to CD8 ratio within normal limits. Natural killer cells are not increased. Plasma cells are not overtly increased. No significant CD45 dim population is identified. CD34+ blasts are not increased.
+      
+      Differential diagnostic considerations include follicular lymphoma, diffuse large B-cell lymphoma, Burkitt lymphoma, or possibly, double-hit lymphoma. Correlation with morphology (if submitted), clinical and laboratory data is recommended for final diagnosis and classification. Furthermore, FISH studies for t(14;18), c-MYC and BCL-6 translocations are recommended.
+      
+      {{:cytospin_text}}
+
+    # {{Bbilling;}}
+
+# CD10-/CD5- B-cell lymphoma cd5cd10neg
+# Specimen quality:
+# Flow cytometry identifies an immunophenotypically abnormal CD5-/CD10- B-cell population comprising % of total cellular events. Of the CD19+ B-lymphoid cells, % have increased forward scatter characteristics indicative of larger cell volume or size.
+# Antigens expressed:
+# Antigens not expressed: 
+# CD3+ T-lymphocytes show no pan T cell antigen aberrancies and have a CD4 to CD8 ratio within normal limits. Natural killer cells are not increased. Plasma cells are not overtly increased. No significant CD45 dim population is identified. CD34+ blasts are not increased.
+# Differential diagnostic considerations include marginal zone lymphoma or lymphoplasmacytic lymphoma. Correlation with morphology (if submitted), clinical, laboratory, and genetic data is recommended for final diagnosis and classification.
+# A Wright-Giemsa stained cytospin from the flow cytometry specimen was examined for internal quality control purposes.
+
+  - triggers: ["marginal;","lymphoplasmacytic;","mzl;","lpl;","cd5negcd10neg;","fc.bcell;","cd5neg\\","cd10neg\\"]
+    label: "marginal zone lymphoma or lymphoplasmacytic lymphoma flow cytometry"
+    replace: |
+      {{:specimen_adequate_text}}
+      
+      Flow cytometry identifies an immunophenotypically abnormal CD5-/CD10- B-cell population comprising % of total cellular events. Of the CD19+ B-lymphoid cells, % have increased forward scatter characteristics indicative of larger cell volume or size.
+      
+      Antigens expressed:
+      Antigens not expressed:
+
+      CD3+ T-lymphocytes show no pan T cell antigen aberrancies and have a CD4 to CD8 ratio within normal limits. Natural killer cells are not increased. Plasma cells are not overtly increased. No significant CD45 dim population is identified. CD34+ blasts are not increased.
+      
+      Differential diagnostic considerations include marginal zone lymphoma or lymphoplasmacytic lymphoma. {{:correlate_diagnosis_text}}
+
+      {{:cytospin_text}}
+
+    # {{Bbilling;}}
+
+
+
+#hairy cell
+
+  - triggers: ["hairy;","fc.bcell;\\","fc.hcl;\\","cd5\\","hcl;","bcell;"]
+    label: "hairy cell leukemia flow cytometry"
+    replace: |
+      {{:specimen_adequate_text}}
+
+      Flow cytometry identifies an immunophenotypically abnormal CD5-/CD10- B-cell population with co-expression of {{$HCL.pheno;}} {{c/w}} involvement by hairy cell leukemia comprising $|$% of total cellular events. 
+
+      {{:cytospin_text}}
+
+      {{HCLbilling;}}
+
+
+## - Generic Report Text - ##
+
+# Specimen quality:
+  - trigger: ":specimen_adequate_text"
+    label: "generic text - specimen quality"
+    replace: 'Specimen quality: adequate'
+
+  # Cytospin reference text
+  - trigger: ":cytospin_text"
+    label: "generic text - cytospin was examined"
+    replace: >
+      A Wright-Giemsa stained cytospin from the flow cytometry specimen was examined for internal quality control purposes.
+
+  # Correlation with morphology Recommended Text
+  # Correlation with morphology (if submitted), clinical, laboratory, and genetic data is recommended for final diagnosis and classification.
+  - trigger: ":correlate_diagnosis_text"
+    label: "generic text - correlate diagnosis"
+    replace: >
+      Correlation with morphology (if submitted), clinical, laboratory, and genetic data is recommended for final diagnosis and classification.
+
+  # Correlation with morphology (if submitted), clinical, laboratory, and genetic data is recommended for final diagnosis and classification.
+  - trigger: ":correlate_process_text"
+    label: "generic text - correlate process"
+    replace: >
+      Correlation with morphology (if submitted), clinical and laboratory data is recommended. A malignant process cannot be excluded solely on the basis of this assay.
+
+## - Billing Flow Cytometry - ##
+
+# - B Tube Bbilling
+# Flow cytometry was performed using antibodies to the following cellular antigens: CD45, CD34, CD19, CD20, Kappa, Lambda, CD10, CD5, CD200, CD38.
+# Total antigens analyzed: 10
+  - triggers: ["bbilling;","fc.billing;","bcell;"]
+    label: "billing for b-cell tube"
+    replace: |
+      Flow cytometry was performed using antibodies to the following cellular antigens: CD45, CD34, CD19, CD20, Kappa, Lambda, CD10, CD5, CD200, CD38.
+      Total antigens analyzed: 10
+
+# -T Tube Tbilling
+# Flow cytometry was performed using antibodies to the following cellular antigens: CD45, CD34, CD2, CD3, CD4, CD5, CD7, CD8, CD56, TCR-GD.
+# Total antigens analyzed: 10
+
+  - triggers: ["tbilling;","fc.billing;","tcell;"]
+    label: "billing for t-cell tube"
+    replace: |
+      Flow cytometry was performed using antibodies to the following cellular antigens: CD45, CD34, CD2, CD3, CD4, CD5, CD7, CD8, CD56, TCR-GD.
+      Total antigens analyzed: 10
+
+# LGL Panel (T, M1, CD30 tubes) LGLbilling
+# Flow cytometry was performed using antibodies to the following cellular antigens: CD45, CD34, CD2, CD3, CD4, CD5, CD7, CD8, CD56, TCR-GD, CD16, CD10, CD13, CD64, CD14, HLA-DR, CD11b, CD52, CD25, CD30.
+# Total antigens analyzed: 20
+
+  - triggers: ["LGLbilling;","fc.billing;","lgl;","lgll;","tcell;"]
+    label: "billing for lgl panel"
+    replace: |
+      Flow cytometry was performed using antibodies to the following cellular antigens: CD45, CD34, CD2, CD3, CD4, CD5, CD7, CD8, CD56, TCR-GD, CD16, CD10, CD13, CD64, CD14, HLA-DR, CD11b, CD52, CD25, CD30.
+      Total antigens analyzed: 20
+
+# T cell and CD30 Panel (T, CD30 tubes) TCD30billing
+# Flow cytometry was performed using antibodies to the following cellular antigens: CD45, CD34, CD2, CD3, CD4, CD5, CD7, CD8, CD56, TCR-GD, CD52, CD25, CD30.
+# Total antigens analyzed: 13
+
+  - triggers: ["TCD30billing;","fc.billing;","cd30;","tcell;"]
+    label: "billing for t cell and cd30 panel"
+    replace: |
+      Flow cytometry was performed using antibodies to the following cellular antigens: CD45, CD34, CD2, CD3, CD4, CD5, CD7, CD8, CD56, TCR-GD, CD52, CD25, CD30.
+      Total antigens analyzed: 13
+
+# Plasma cell Panel (PC tube) PCbilling
+# Flow cytometry was performed using antibodies to the following cellular antigens: CD45, CD19, CD20, Kappa, Lambda, CD38, CD138, CD56.
+# Total antigens analyzed: 8
+
+  - triggers: ["PCbilling;","fc.billing;","pc;","plasma;"]
+    label: "billing for plasma cell panel"
+    replace: |
+      Flow cytometry was performed using antibodies to the following cellular antigens: CD45, CD19, CD20, Kappa, Lambda, CD38, CD138, CD56.
+      Total antigens analyzed: 8
+
+# Mastocytosis/Mast Cell Panel (Mast cell tube) Mastbilling
+# Flow cytometry was performed using antibodies to the following cellular antigens: CD45, CD34, CD117, CD2, CD25.
+# Total antigens analyzed: 5
+
+  - triggers: ["Mastbilling;","fc.billing;","mast;"]
+    label: "billing for mastocytosis/mast cell panel"
+    replace: |
+      Flow cytometry was performed using antibodies to the following cellular antigens: CD45, CD34, CD117, CD2, CD25.
+      Total antigens analyzed: 5
+
+# PNH Panel (PNH RBC and WBC tubes) PNHbilling
+# Flow cytometry was performed using antibodies to the following cellular antigens: CD45, CD235a, CD15, CD59, FLAER.
+# Total antigens analyzed: 5
+
+  - triggers: ["PNHbilling;","fc.billing;","pnh;"]
+    label: "billing for pnh panel"
+    replace: |
+      Flow cytometry was performed using antibodies to the following cellular antigens: CD45, CD235a, CD15, CD59, FLAER.
+      Total antigens analyzed: 5
+
+# Sezary Panel (Sezary tube) Sezarybilling
+# Flow cytometry was performed using antibodies to the following cellular antigens: CD45, CD3, CD4, CD7, CD8, CD26, CD52, CD30.
+# Total antigens 
+
+  - triggers: ["Sezarybilling;","fc.billing;", "sez;"]
+    label: "billing for sezary panel"
+    replace: |
+      Flow cytometry was performed using antibodies to the following cellular antigens: CD45, CD3, CD4, CD7, CD8, CD26, CD52, CD30.
+      Total antigens analyzed: 8
+
+
+# A La Carte ClearLLab Tube Templates:
+
+# M1 Tube M1billing
+# Flow cytometry was performed using antibodies to the following cellular antigens: CD45, CD34, CD16, CD7, CD10, CD13, CD64, CD14, HLA-DR, CD11b.
+# Total antigens analyzed: 10
+
+  - triggers: ["M1billing;","fc.billing;","m1;"]
+    label: "billing for m1 tube"
+    replace: |
+      Flow cytometry was performed using antibodies to the following cellular antigens: CD45, CD34, CD16, CD7, CD10, CD13, CD64, CD14, HLA-DR, CD11b.
+      Total antigens analyzed: 10
+
+# M2 Tube M2billing
+# Flow cytometry was performed using antibodies to the following cellular antigens: CD45, CD34, CD15, CD123, CD117, CD13, CD33, CD38, HLA-DR, CD19.
+# Total antigens analyzed: 10
+
+  - triggers: ["M2billing;","fc.billing;","m2;"]
+    label: "billing for m2 tube"
+    replace: |
+      Flow cytometry was performed using antibodies to the following cellular antigens: CD45, CD34, CD15, CD123, CD117, CD13, CD33, CD38, HLA-DR, CD19.
+      Total antigens analyzed: 10
+
+
+
+## - Technical Limitations Flow - ##
+
+
+# Flow limitations limits
+# Due to their large size outside the regular gating parameters, certain lymphomas such as Hodgkin lymphoma or anaplastic large cell lymphoma may not be detected by this analysis.  
+
+  - triggers: ["limits;","fc.limits;","fc.comments;"]
+    label: "comment - hodgkin assay limitations"
+    replace: >
+      Due to their large size outside the regular gating parameters, certain lymphomas such as Hodgkin lymphoma or anaplastic large cell lymphoma may not be detected by this analysis.  
+
+# Low lymphocyte count (should be used for <75 total lymphocyte events) lymphlow
+# Specimen quality:
+# No significant lymphocyte population is detected by flow cytometry. Events are too few for meaningful analysis of B-cell and T-cell populations.
+# Correlation with morphology (if submitted), clinical and laboratory data is recommended. A malignant process cannot be excluded solely on the results of this assay.
+# A Wright-Giemsa stained cytospin from the flow cytometry specimen was examined for internal quality control purposes.
+
+  - triggers: ["lymphlow;","toofew;","fc.limits;","fc.low;"]
+    label: "report - too few lymphocytes"
+    replace: |
+      {{:specimen_adequate_text}}
+      
+      No significant lymphocyte population is detected by flow cytometry. Events are too few for meaningful analysis of B-cell and T-cell populations.
+
+      {{:correlate_process_text}}
+
+      {{:cytospin_text}}
+
+      {{Bbilling;}}
+
+
+# Low B-cell count (should be used for <75 total B-cell events) blow
+# Specimen quality:
+# Flow cytometry shows no significant B-cell population. Too few B-cells are present for meaningful clonality analysis. However, a malignant process cannot be excluded solely on the basis of these results.
+# A Wright-Giemsa stained cytospin from the flow cytometry specimen was examined for internal quality control purposes.
+
+  - triggers: ["blow;","toofew;","fc.limits;","fc.low;"]
+    label: "too few B-cells"
+    replace: |
+      {{:specimen_adequate_text}}
+
+      Flow cytometry shows no significant B-cell population. Too few B-cells are present for meaningful clonality analysis. However, a malignant process cannot be excluded solely on the basis of these results.
+
+      {{:cytospin_text}}
+
+      {{Bbilling;}}
+
+#toofewcells
+# Too few cells for flow cytometry (should be used when flow cytometry was ordered, but not performed) toofewcells
+# Flow cytometry was not performed due to insufficient viable cell counts.
+# A Wright-Giemsa stained cytospin from the flow cytometry specimen was examined for internal quality control purposes.
+
+  - triggers: ["toofewcells;","toofew;","fc.limits;","fc.low;"]
+    label: "report - too few cells total"
+    replace: |
+      Specimen quality: paucicellular
+
+      Flow cytometry was not performed due to insufficient viable cell counts.
+
+      {{:cytospin_text}}
+
+    # No billing
+
+
+
+## ## Sezary / PNH ## ##
+
+## - Paroxysmal Nocturnal Hemoglobinuria (PNH) - ##
+
+### Negative Paroxysmal Nocturnal Hemoglobinuria (PNH) pnhneg
+# Flow cytometry performed on the peripheral blood shows retained expression of CD59 in red blood cells and granulocytes. Furthermore, granulocytes demonstrate retained FLAER binding.
+
+  - triggers: ["pnh;","pnhneg"]
+    label: "flow - pnh negative"
+    replace: |
+      {{:specimen_adequate_text}}
+
+      Flow cytometry performed on the peripheral blood shows retained expression of CD59 in red blood cells and granulocytes. Furthermore, granulocytes demonstrate retained FLAER binding.
+      
+      {{PNHbilling;}}
+
+
+###Positive Paroxysmal Nocturnal Hemoglobinuria (PNH) pnhpos
+# A paroxysmal nocturnal hemoglobinuria clone is detected by flow cytometry in both the red blood cells and granulocytes. Please see attached table for exact percentages of partial, complete, and combined loss of CD59 and FLAER in red blood and granulocytes.
+
+  - triggers: ["pnh;","pnhpos"]
+    label: "flow - pnh positive"
+    replace: |
+      {{:specimen_adequate_text}}
+
+      A paroxysmal nocturnal hemoglobinuria clone is detected by flow cytometry in both the red blood cells and granulocytes. Please see attached table for exact percentages of partial, complete, and combined loss of CD59 and FLAER in red blood and granulocytes.
+
+      {{PNHbilling;}}
+
+
+# Sezary Syndrome Positive sezarypos
+# Flow cytometry performed on the peripheral blood shows % total lymphocytes are CD3+ T-lymphocytes. The T-cells have a [slight/moderate/marked] increase in CD4 to CD8 ration (CD4:CD8= ) and few T-cells co-express CD4 and CD8. CD4+ T-cells [show no significant loss of CD7, but are negative for CD26 expression/ show no significant loss of CD26, but are negative for CD7 expression/ display partial/total loss of both CD7 and CD26 expression]. The T-cells are positive for CD52 and negative for CD30 expression. 
+
+  - triggers: ["sez\\","sezarypos;","sez;"]
+    label: "flow - sezary positive"
+    replace: |
+      {{:specimen_adequate_text}}
+
+      Flow cytometry performed on the peripheral blood shows % total lymphocytes are CD3+ T-lymphocytes. The T-cells have a [slight/moderate/marked] increase in CD4 to CD8 ration (CD4:CD8= ) and few T-cells co-express CD4 and CD8. CD4+ T-cells [show no significant loss of CD7, but are negative for CD26 expression/ show no significant loss of CD26, but are negative for CD7 expression/ display partial/total loss of both CD7 and CD26 expression]. The T-cells are positive for CD52 and negative for CD30 expression. 
+
+      {{Sezarybilling;}}
+
+
+# Sezary Syndrome Negative sezaryneg
+# Flow cytometry performed on the peripheral blood reveals CD3+ T-lymphocytes are % of total lymphocytes. The T-cells have a normal CD4 to CD8 ratio (CD4:CD8= ) with few T-cells co-expressing CD4 and CD8. The majority CD4+ T-cells are positive for expression of CD7, CD26, and CD52, and negative for expression of CD30.
+
+  - triggers: ["sez\\","sezaryneg;","sez;"]
+    label: "flow - sezary negative"
+    replace: |
+      {{:specimen_adequate_text}}
+
+      Flow cytometry performed on the peripheral blood reveals CD3+ T-lymphocytes are % of total lymphocytes. The T-cells have a normal CD4 to CD8 ratio (CD4:CD8= ) with few T-cells co-expressing CD4 and CD8. The majority CD4+ T-cells are positive for expression of CD7, CD26, and CD52, and negative for expression of CD30. 
+
+      {{Sezarybilling;}}
+
+
+
+
+## - Normal Flow - ##
+
+  - triggers: ["normal;","fc.normal;","nps;"]
+    label: "normal flow cytometry new patient screen"
+    replace: |
+      {{:specimen_adequate_text}}
+
+      Flow cytometry analysis shows the CD45 dim-gated events are % of overall cellularity of the specimen, with a subset positive for expression of CD34 and CD117.  Monocyte-gated events account for % of overall cellularity and express CD13, CD33, CD64, and CD14.  Lymphocyte-gated events account for % of the overall cellularity and include a small polytypic CD19+CD20+ B-cell population (% of lymphocytes) with no significant co-expression of CD5 or CD10.  CD3+ T-cells (comprising % of lymphocytes) show no significant loss of pan T-cell antigens and have a CD4 to CD8 ratio within normal limits. There is a small population of CD56+ events (% of lymphocytes) consistent with natural killer cells. There is no overt increase in CD38+ plasma cells.
+
+      {{:cytospin_text}}
+
+      {{:correlate_process_text}}
+
+      {{NPSbilling;}}
+
+
+
+
+
+
+## ## MRD Flow  ## ##
+
+## - MRD Technical - ##
+
+# Rare events MRD testing (if <500,000 events) rare 
+# This is a low cellularity sample and the number of events needed to achieve the laboratory's validated lower limit of sensitivity could not be collected, and therefore the analytical sensitivity may be reduced.
+
+  - triggers: ["mrd;","rare;","fc.limits;"]
+    replace: >
+      This is a low cellularity sample and the number of events needed to achieve the laboratory's validated lower limit of sensitivity could not be collected, and therefore the analytical sensitivity may be reduced.
+
+## - MRD Tables - ##
+
+  - triggers: ["mrd;","day29;"]
+    label: "mrd day29 table"
+    replace: |
+      ### ANTIBODIES TESTED FOR ANALYSIS (*Bone Marrow*)
+      | **B-cell related**        |        | **T-cell related**         |        |
+      |:--------------------------|--------|:---------------------------|--------|
+      | **CD20**                  |        | **CD3**                    |        |
+      | CD19                      |        |  *Miscellaneous*           |        |
+      | CD9                       |        | CD10                       |        |
+      | CD58                      |        | CD38                       |        |
+      | CD22                      |        | CD45                       |        |
+      | *Myeloid*                 |        | CD34                       |        |
+      | CD13/CD33                 |        | CD123                      |        |
+      | CD71                      |        |                            |        |
+      |                           |        |                            |        |
+
+
+
+  - triggers: ["mrd;","day8;"]
+    label: "mrd day8 table"
+    replace: |
+      ### ANTIBODIES TESTED FOR MRD — Day 8 (Peripheral Blood)
+      #### B-cell Related
+
+      | Antibody | Result  |
+      |----------|---------|
+      | CD19     | Normal  |
+      | CD10     | Negative|
+      | CD20     | Normal  |
+
+      #### Miscellaneous
+      | Antibody | Result  |
+      |----------|---------|
+      | CD45     | Normal  |
+      | CD34     | Negative|
+

@@ -1,0 +1,171 @@
+matches:
+
+## Hemoglobin ##
+# Hgb & Hg
+  - triggers: ["h/g"]
+    replace: "hemoglobin"
+    propagate_case: true
+
+  - triggers: ["hgb","hbg"] #hbg a typo
+    replace: "Hgb"
+    left_word: true
+
+  - trigger: hg
+    replace: >
+      "hg" is not an accepted medical abbreviation (mercury).
+      Please use "hgb" or "hbg" instead.
+    label: "ERROR MSG -- 'hg' is not hemoglobin"
+    left_word: true
+
+  - trigger: hb
+    replace: "Hb"
+    # left_word: true #for hbA
+    word: true
+
+  #* NOTE new `?` convention
+  #* `?` search fallback for variants
+  - triggers: ["hb/a","hb/?", "hb.band(a)"]
+    replace: "Hb A"
+    label: "Hb A - α2β2"
+    word: true
+
+  - triggers: ["hb/a2","hb/?", "hb.band(c)"]
+    replace: "Hb A2"
+    label: "Hb A2 - α2δ2"
+    word: true
+
+  - triggers: ["hb/s","hb/?", "hb.band(s)"]
+    replace: "Hb S"
+    label: "Hb S - α2β(6 glu->val)2"
+    word: true
+
+  - triggers: ["hb/c","hb/?", "hb.band(c)"]
+    replace: "Hb C - α2β(6 glu->lys)"
+    label: "Hb C - α2β(6 glu->lys)2"
+    word: true
+
+  - triggers: ["hb/d","hb/?", "hb.band(s)"]
+    replace: "Hb D"
+    label: "Hb D - α2β(121 glu->gln)2"
+    word: true
+
+  - triggers: ["hb/?","hb/e", "hb.band(c)"]
+    replace: "Hb E"
+    label: "Hb E - α2β(21 glu->lys)2"
+    word: true
+
+  - triggers: ["hb/?","hb/f", "hb.band(f)"]
+    replace: "Hb F"
+    label: "Hb F - α2γ2"
+    word: true
+
+  #Note Hb G makes 2 Hb A2 bands as well as two "Hb A bands"
+  - triggers: ["hb/g","hb/?", "hb.band(s)"]
+    replace: "Hb G"
+    label: "Hb G-Philadelphia - α1α(68 glu->asp)β2"
+    word: true
+
+  # see Hb Barts below
+  - triggers: ["hb/?","hb/H","hb.band(fast)"]
+    replace: "Hb H"
+    label: "Hb H - β4"
+    word: true
+
+  #Note δ and β are on the same chromosome 11. ζ and α are on the same chromosome 16
+  - triggers: ["hb/?","hb/lepore", "hb.band(s)"]
+    replace: "Hb Lepore: a δ-β "
+    label: "Hb Lepore - δ-β fusion gene"
+    word: true
+
+  #* non-deletional α-thalassemia 
+  #* Thalassemic type RBC indices
+  #* αCS is abnormally large α-globin chain
+  #* HbA, HbA2 -> now make 4 bands
+  #* common in southeast asia
+  - triggers: ["hb/?","hb/cs"]
+    replace: "Hb Constant Spring"
+    label: "Hb CS - αCSαβ2"
+    word: true
+
+  - triggers: ["hb-m", "hb.band(a)"]
+    replace: "Hb M" 
+    # HbM-Iwate
+    # HbM-Boston
+    # HbM-Hyde Park
+    label: "Hb M - Methemoglobin variants"
+    word: true
+
+  - triggers: ["hb/?","hb-unstable"]
+    replace: "Hb unstable"
+    label: "Hb with extreme sensitivity to oxidative stress (Hb Hammersmith, Ann Arbor, Koln)"
+    word: true
+
+
+##:  Embryonic Hemoglobin  :##
+  - triggers: ["hb/?","hb/portland"]
+    replace: "Hb Portland"
+    label: "Hb Portland (embryonic)- ζ2γ2"
+    word: true
+
+  - triggers: ["hb/?","hb/portland2"]
+    replace: "Hb Portland-2"
+    label: "Hb Portland-2 (embryonic)- ζ2β2"
+    word: true
+
+  - triggers: ["hb/?","hb/gower"]
+    replace: "Hb Gower"
+    label: "Hb Gower (embryonic)- ζ2ε2"
+    word: true
+
+  - triggers: ["hb/?","hb/barts","hb.band(fast)"]
+    replace: "Hb Barts"
+    label: "Hb Barts (embryonic)- γ4"
+    word: true
+
+
+##: alternative macros  :## 
+
+  - trigger: "hba;"
+    replace: "Hb A"
+    propagate_case: true
+    left_word: true
+
+  - trigger: "hb/a;"
+    replace: "hemoglobin A"
+    propagate_case: true
+    left_word: true 
+
+
+  - trigger: "hbf;"
+    replace: "Hb F"
+    propagate_case: true
+    left_word: true
+
+  - trigger: "hb/f;"
+    replace: "hemoglobin F"
+    propagate_case: true
+    left_word: true 
+
+
+  - trigger: "hb/s;"
+    replace: "hemoglobin S"
+    propagate_case: true
+    left_word: true
+
+  - trigger: "hbs;"
+    replace: "hemoglobin S"
+    propagate_case: true
+    left_word: true
+
+
+
+  - trigger: "hbc;"
+    replace: "Hb C"
+    propagate_case: true
+    left_word: true
+
+  - trigger: "hb/c;"
+    replace: "Hb C"
+    propagate_case: true
+    left_word: true
+    

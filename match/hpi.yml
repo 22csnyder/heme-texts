@@ -1,227 +1,45 @@
-# HPI
-# # this file is for common usage patterns in clinical note or history
-# Match Examples in this file:
-# 
-# Age and Gender Patterns:
-# - Standard: 34-year-old female, 34 year old female, 34yo female
-# - Naked: 34f, 15m
-# - Bracketed: :34f:, :15m:
-# 
-# Examples
-# | Input                | Output               |
-# |----------------------|---------------------|
-# | :34f:                | The patient is a 34-year-old female |
-# | :15m:                | The patient is a 15-year-old male   |
-# | :4mom:               | The patient is a 4-month-old boy    |
-# | :4df:                | The patient is a 4-day-old baby girl|
-
+# History and Physical Information
+# Clean, focused version for new chapter
 
 matches:
-
-#TODO: regex for "37f" and replace with "The patient is a 37-year-old female "
-#* DONE !
-
-  # Adult male format (13+)
+  # Age and gender patterns
   - regex: ":(?P<age>(?:1[3-9]|[2-9]\\d|[1-9]\\d{2,}))m:"
     replace: "The patient is a {{age}}-year-old male"
     label: "Convert :34m: to The patient is a 34-year-old male"
 
-  # Adult female format (13+)
   - regex: ":(?P<age>(?:1[3-9]|[2-9]\\d|[1-9]\\d{2,}))f:"
     replace: "The patient is a {{age}}-year-old female"
     label: "Convert :34f: to The patient is a 34-year-old female"
 
-  # Child male format (0-12)
   - regex: ":(?P<age>(?:[0-9]|1[0-2]))m:"
     replace: "The patient is a {{age}}-year-old boy"
     label: "Convert :12m: to The patient is a 12-year-old boy"
 
-  # Child female format (0-12)
   - regex: ":(?P<age>(?:[0-9]|1[0-2]))f:"
     replace: "The patient is a {{age}}-year-old girl"
     label: "Convert :12f: to The patient is a 12-year-old girl"
 
-  # Month-old male format (with optional space)
   - regex: ":(?P<age>\\d+)mo ?m:"
     replace: "The patient is a {{age}}-month-old boy"
     label: "Convert :4mo m: or :4mom: to The patient is a 4-month-old boy"
 
-  # Month-old female format (with optional space)
   - regex: ":(?P<age>\\d+)mo ?f:"
     replace: "The patient is a {{age}}-month-old girl"
     label: "Convert :4mo f: or :4mof: to The patient is a 4-month-old girl"
 
-  # Day-old male format (with optional space)
   - regex: ":(?P<age>\\d+)d ?m:"
     replace: "The patient is a {{age}}-day-old baby boy"
     label: "Convert :4d m: or :4dm: to The patient is a 4-day-old baby boy"
 
-  # Day-old female format (with optional space)
   - regex: ":(?P<age>\\d+)d ?f:"
     replace: "The patient is a {{age}}-day-old baby girl"
     label: "Convert :4d f: or :4df: to The patient is a 4-day-old baby girl"
 
-
-
-
-
-
-
-
-
-
-
-  # - trigger: ":pt:"
-  #   replace: "The patient is a ***-year-old *** with ***"
-  #   propagate_case: true
-  
-  - trigger: "pt;"
-    replace: "the patient"
-    propagate_case: true
-
-
-
-# A/B
-  - trigger: "pt"
-    replace: "patient"
-    propagate_case: true
-    word: true
-
-  - trigger: "c/o"
-    replace: "complains of"
-    propagate_case: true
-    word: true
-
-  - trigger: "sx"
-    replace: "symptoms"
-    propagate_case: true
-    word: true
-
-  - trigger: "hx"
-    replace: "history"
-    propagate_case: true
-    word: true
-
-
-
-  - trigger: "y/o"
-    replace: "year old"
-    propagate_case: true
-    word: true
-
-  - trigger: "h/o"
-    replace: "history of"
-    propagate_case: true
-    word: true
-  
-  - trigger: "c/f"
-    replace: "concern for "
-    propagate_case: true
-    word: true
-    # left_word: true #* which is better?
-
-  - trigger: "c/w"
-    replace: "consistent with"
-    propagate_case: true
-    word: true
-
-  - trigger: "s/p"
-    replace: "status post"
-    propagate_case: true
-    word: true
-
-  - trigger: "r/o"
-    replace: "rule out"
-    propagate_case: true
-    word: true
-
-  - trigger: "d/c"
-    replace: "discontinue"
-    propagate_case: true
-    word: true
-
-  - trigger: "w/u"
-    replace: "workup"
-    propagate_case: true
-    word: true
-
-  - trigger: "b/l"
-    replace: "bilateral"
-    propagate_case: true
-    word: true
-
-  - trigger: "n/v"
-    replace: "nausea and vomiting"
-    propagate_case: true
-    word: true
-
-  - trigger: "n/k/a"
-    replace: "no known allergies"
-    propagate_case: true
-    word: true
-
-  - trigger: "n/k/f"
-    replace: "no known family history"
-    propagate_case: true
-    word: true
-
-  - trigger: "h/p"
-    replace: "history and physical"
-    propagate_case: true
-    word: true
-
-  - trigger: "a/w"
-    replace: "associated with"
-    propagate_case: true
-    word: true
-
-  - trigger: "i/l"
-    replace: "involving"
-    propagate_case: true
-    word: true
-    # sometimes used as "involves left" — contextual
-
-  - trigger: "f/u"
-    replace: "follow-up"
-    propagate_case: true
-    word: true
-
-  - trigger: "o/e"
-    replace: "on examination"
-    propagate_case: true
-    word: true
-
-  - trigger: "w/o"
-    replace: "without"
-    propagate_case: true
-    word: true
-
-  - trigger: "t/f"
-    replace: "transferred from"
-    propagate_case: true
-    word: true
-
-  - trigger: "osh"
-    replace: "outside hospital"
-    propagate_case: true
+  # Discussion patterns
+  - trigger: "d/w"
+    replace: "Case discussed with Dr. $|$ on {{date}}  --{{MyInitials}} {{time}}"
     word: true
 
   - trigger: "MyInitials"
     replace: "cgs"
-
-  - trigger: "d/w"
-    replace: "Case discussed with Dr. $|$ on {{date}} \n--{{MyInitials}} {{time}}"
-    # propagate_case: true
     word: true
-    vars:
-      - name: date
-        type: match
-        params:
-          trigger: ":date"
-          replace: "{{:date}}"
-      - name: time
-        type: match
-        params:
-          trigger: ":now"
-
-
