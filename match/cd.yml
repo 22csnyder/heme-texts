@@ -14,19 +14,275 @@
 
 matches:
 
+  - regex: yz(?P<number>\\d),
+    replace: "YZ{{number}}"
+    word: true
+    # word: true
+    label: "Convert yz# to YZ# format"
+
+
+  # Other Named Markers and Reagents
+
+  - triggers: ["eber", "eber\\","e/ish","e-ish","eber-ish"]
+    label: "EBER-ISH"
+    replace: "EBER-ISH"
+    word: true
+
+  - triggers: ["hladr", "hla-dr"]
+    replace: "HLA-DR"
+    word: true
+
+
+
+  - trigger: "tp53"
+    replace: "TP53"
+    # word: true
+
+  #Cyclin D1 is a protein that in humans is encoded by the CCND1 gene.
+  - trigger: ccnd1
+    replace: CCND1
+    label: "Convert ccnd1 to CCND1"
+    # word: true
+
+  #c-Myc is a protein that in humans is encoded by the MYC gene.
+  - trigger: "myc"
+    replace: "MYC"
+    # word: true
+  - triggers: ["cmyc", "c-myc"]
+    replace: "c-MYC"
+    # word: true
+
+
+
+
+
+# BCL-X
+
+
+  # BCL-2 and BCL-6 with and without hyphen, left_word for hyphenated, word:true for non-hyphenated
+
+  - trigger: bcl-2
+    replace: BCL-2
+    word: true
+
+  - trigger: bcl-6
+    replace: BCL-6
+    word: true
+
+  - triggers: [bcl2,"bcl-"]
+    replace: BCL2
+    word: true
+
+  - triggers: [bcl6,"bcl-"]
+    replace: BCL6
+    word: true
+
+  # Also allow "bcl" as a trigger for both BCL-2 and BCL-6, as separate entries
+
+  - trigger: bcl
+    replace: BCL-2
+    word: true
+
+  - trigger: bcl
+    replace: BCL-6
+    word: true
+
+  - regex: "bcl-(?P<suffix>[a-z0-9]+)"
+    replace: "BCL-{{suffix|upper}}"
+    word: true
+    label: "Convert bcl-x to BCL-X format"
+
+  - trigger: kappa
+    replace: Kappa
+    word: true
+
+  - trigger: lambda
+    replace: Lambda
+    word: true
+
+  - trigger: cykappa
+    replace: (cy)Kappa
+    word: true
+
+
   # Basic CD Formatting
-  # Examples
-  #   eeecd45eee
-  #   CD45eee
-  #   eeeCD45
   - regex: "(?i)cd79"
     replace: "CD79a"
 
+  # - trigger: cd
+  #   replace: CD
+  #   word: true
+  #   right_word: false
 
-  - regex: "\\bcd(?P<number>\\d+)\\b"
-    replace: "CD{{number}}"
-    label: "Convert cd# to CD# format"
+  # - regex: "cd(?P<number>\\d+)(?=\\s|$|[^\\d])"
+  #   replace: "CD{{number}}"
+  #   label: "Convert cd# to CD# format"
+
+
+  ## Standing Instructions for Cursor , DO NOT ERASE ##
+
+  ## Standing Instructions for Cursor , DO NOT ERASE ##
+  #  ** In this file cd.yml, whenver one trigger is also a prefix for a strictly longer trigger, the the shorter, prefix trigger must be given the property "word: true (which effectively adds waits for a word break or a continuatino of the longer trigger word when deciding what to do. 
+  ## Standing Instructions for Cursor , DO NOT ERASE ##
+  ## #eg cd3 and cd34: cd3 must be given word: true
+  ## #eg bcl and bcl-2: bcl must be given word: true
+
+
+  - trigger: cd1
+    replace: CD1
+    word: true
+
+  - trigger: cd1a
+    replace: CD1a
+    word: true
+
+  - trigger: cd2
+    replace: CD2
+    word: true
+
+  - trigger: cd3
+    replace: CD3
+    word: true
+
+  - trigger: cd10
+    replace: CD10
+    word: true
+
+
+
+  - trigger: cd33
+    replace: CD33
+    word: true
     
+  # Stem cells
+  - trigger: cd34
+    replace: CD34
+    word: true
+
+  - trigger: cd117
+    replace: CD117
+    word: true
+
+  # All leukocyte groups
+  - trigger: cd45
+    replace: CD45
+    word: true
+
+  # Granulocyte markers
+  - trigger: cd11b
+    replace: CD11b
+    word: true
+
+  - trigger: cd14
+    replace: CD14
+    word: true
+
+  - trigger: cd15
+    replace: CD15
+    word: true
+
+  - trigger: cd24
+    replace: CD24
+    word: true
+
+  - trigger: cd64
+    replace: CD64
+    word: true
+
+  - trigger: cd182
+    replace: CD182
+    word: true
+
+  # Monocyte markers
+  - trigger: cd4
+    replace: CD4
+    label: T-cell and monocyte
+    word: true
+
+  - trigger: cd11a
+    replace: CD11a
+    word: true
+
+  - trigger: cd91
+    replace: CD91
+    word: true
+
+  - trigger: cd16
+    replace: CD16
+    word: true
+
+  # T helper cell markers (CD4 already defined above)
+
+  # T regulatory cell markers
+  - trigger: cd25
+    replace: CD25
+    word: true
+
+  # Cytotoxic T cell markers
+  - trigger: cd8
+    replace: CD8
+    label: T-cell
+    word: true
+
+  # B lymphocyte markers
+  - trigger: cd19
+    replace: CD19
+    word: true
+
+  - trigger: cd20
+    replace: CD20
+    word: true
+
+  - trigger: cd21
+    replace: CD21
+    label: "follicular dendritic cell (fdc) meshwork"
+    word: true
+
+  - trigger: cd22
+    replace: CD22
+    label: "B-cell, basophil"
+    word: true
+
+  - trigger: cd23
+    replace: CD23
+    word: true
+
+  - trigger: cd38
+    replace: CD38
+    word: true
+
+  - trigger: cd40
+    replace: CD40
+    word: true
+
+  # Thrombocyte markers
+  - trigger: cd61
+    replace: CD61
+    word: true
+
+  - trigger: cd71
+    replace: CD71
+    label: "CD71, expressed on erythroid and activated cells"
+    word: true
+
+  - trigger: cd81
+    replace: CD81
+    label: "CD81, tetraspanin expressed on various cell types"
+    word: true
+
+    
+
+  # Natural killer cell markers
+  - trigger: cd56
+    replace: CD56
+    word: true
+
+  - trigger: cd30
+    replace: CD30
+    word: true
+
+
+
     # Usage examples:
     # cd13   --> CD13
     # (s)cd3   --> (s)CD3
@@ -56,3 +312,20 @@ matches:
   #         values:
   #           - "CD45RO"
   #           - "CD45RA"
+
+
+  - trigger: cd123
+    replace: CD123
+    label: "CD123, expressed on plasmacytic dendritic cells"
+    word: true
+
+
+  - trigger: cd138
+    replace: CD138
+    label: "CD138, expressed on plasma cells"
+    word: true
+
+  - regex: "(?i)cd200"
+    replace: "CD200"
+    label: "CD200. a PDF marker"
+    word: true

@@ -2,11 +2,8 @@
 # Clean, focused version for new chapter
 
 matches:
-  - trigger: "pt;"
-    replace: "the patient"
-    word: true
 
-  - trigger: "pt"
+  - trigger: "pt\\"
     replace: "patient"
     word: true
 
@@ -14,7 +11,7 @@ matches:
     replace: "complains of"
     word: true
 
-  - trigger: "sx"
+  - trigger: "sx\\"
     replace: "symptoms"
     word: true
 
@@ -23,10 +20,10 @@ matches:
     word: true
 
   - trigger: "y/o"
-    replace: "year old"
+    replace: "year-old"
     word: true
 
-  - trigger: "h/o"
+  - triggers: ["h/o", "h:o"]
     replace: "history of"
     word: true
 
@@ -86,18 +83,13 @@ matches:
     replace: "follow-up"
     word: true
 
-  - trigger: "o/e"
-    replace: "on examination"
-    word: true
 
   - trigger: "w/o"
     replace: "without"
     word: true
 
-  - trigger: "t/f"
-    replace: "transferred from"
-    word: true
 
-  - trigger: "osh"
+
+  - trigger: "osh\\"
     replace: "outside hospital"
     word: true

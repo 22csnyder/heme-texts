@@ -1,0 +1,21 @@
+# AI Hematopathology Text Polishing Triggers
+# Usage: Select text, copy it, then type the trigger
+
+triggers:
+  # Hematopathology report formatting - Final Diagnosis, Clinical History, Microscopic Description
+  - trigger: "::path"
+    replace: |
+      {{~/Projects/heme-texts/.venv/bin/python ~/Projects/heme-texts/scripts/ai_script.py "{{clipboard}}" --style path}}
+    word: true
+
+  # Flow cytometry report generation
+  - trigger: "::flow"
+    replace: |
+      {{~/Projects/heme-texts/.venv/bin/python ~/Projects/heme-texts/scripts/ai_script.py "{{clipboard}}" --style flow}}
+    word: true
+
+  # Email polishing - concise, professional, courteous
+  - triggers: ["::email", "::mail"]
+    replace: |
+      {{~/Projects/heme-texts/.venv/bin/python ~/Projects/heme-texts/scripts/ai_script.py "{{clipboard}}" --style email}}
+    word: true

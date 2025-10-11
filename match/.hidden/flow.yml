@@ -2,14 +2,10 @@
 # Clean, focused version for new chapter
 
 matches:
-  - trigger: "fc;"
+  - triggers: ["fc\\","fcm\\"]
     replace: "flow cytometry"
     word: true
 
-  - trigger: "normal;"
-    replace: "normal flow cytometry new patient screen"
-    word: true
-
-  - trigger: "mrd;"
+  - trigger: "fcm:mrd\\"
     replace: "This is a low cellularity sample and the number of events needed to achieve the laboratory's validated lower limit of sensitivity could not be collected, and therefore the analytical sensitivity may be reduced."
-    word: true
+    # word: true

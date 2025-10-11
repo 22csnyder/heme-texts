@@ -1,0 +1,27 @@
+# Citrix-specific configuration for Hyperspace FHCC PATHOLOGY
+# This config addresses text replacement issues in Citrix environments
+
+filter_exec: "Citrix Viewer.app"
+filter_title: "Hyperspace.*FHCC PATHOLOGY"
+
+# Use clipboard backend for better compatibility with Citrix
+backend: Clipboard
+
+# # Increase delay to prevent first letter issues
+# inject_delay: 50
+
+# # Disable auto-restart to prevent interruptions
+# auto_restart: false
+
+# # Increase clipboard threshold for better performance
+# clipboard_threshold: 50
+
+# # Add extra delay for text injection
+# extra_delay: 100
+
+# # Disable word boundaries for better matching in Citrix
+# word_boundaries: false
+
+# # Use a more conservative approach for text replacement
+# pre_paste_delay: 50
+# post_paste_delay: 50

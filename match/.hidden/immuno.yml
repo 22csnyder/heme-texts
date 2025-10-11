@@ -22,31 +22,30 @@ matches:
     replace: "IgA"
     left_word: true
 
-  - trigger: "i/g"
+  - triggers: ["i/g", "i:g"]
     replace: "immunoglobulin"
     label: "immunoglobulin"
     word: true
     propagate_case: true
 
 
-  - trigger: "a/b"
+  - triggers: ["a:b","a:b:"]
     replace: "antibody"
-    # word: true
+    word: true
     propagate_case: true
-
+    
   #* NOTE: pluralize with 's inplace
-  - triggers: ["a//b", "a/b's","antibody's", "antibody/s"]
+  - triggers: ["a:bs","a:bs:"]
     replace: 'antibodies'
     propagate_case: true
     # word: true
 
-
-  - trigger: "a/g"
+  - triggers: ["a:g", "a:g:"]
     replace: "antigen"
     word: true
     propagate_case: true
 
-  - trigger: "a//g"
+  - triggers: ["a:gs:" , "a:gs:"]
     replace: "antigens"
     word: true
     propagate_case: true

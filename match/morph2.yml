@@ -1,0 +1,110 @@
+
+
+matches:
+  - trigger: ":rbm"
+    replace: "Bone marrow, right posterior iliac crest, aspirate smears, particle prep, and peripheral blood smear:"
+    label: "right bmbx specimen report heading"
+    word: true
+
+  - trigger: ":lbm"
+    replace: "Bone marrow, left posterior iliac crest, aspirate smears, particle prep, and peripheral blood smear:"
+    label: "left bmbx specimen report heading"
+    word: true
+
+  - triggers: [":fd1", ":cellularity, :cells"]
+    replace: "***cellular marrow for age (***% cellularity) with ****plasia, myeloid hypoplasia, and ***% blasts by ***." 
+    #Examples for the blanks:
+    # Markedly hyper/hyper/hypo/hypocellular  
+    # marked erythroid hyper/hypo
+    # no increase in blasts / % blasts by CD34 immunohistochemistry
+    label: "Example top line:\n\"Markedly hypercellular marrow for age (~95% cellularity) with marked erythroid hyperplasia, myeloid hypoplasia, and no increase in blasts.\""
+    word: true
+
+  - triggers: [":fd2", ":fd:fcm", "fd:flow"]
+    replace: "- Abnormal myeloid blast population (***% of white cells) identified by flow cytometry"
+    word: true
+
+  - triggers: [":fd3", ":fd:involvement",":fd:neoplasia"]
+    replace: "No evidence of involvement by *** leukemia/neoplasm."
+    word: true
+
+  - triggers: [":fd4", "fd:pbl"]
+    replace: "Peripheral blood with ***cells ***findings"
+    label: "report line - Peripheral blood with leukopenia, absolute neutropenia, microcytic anemia, and thrombocytopenia"
+    word: true
+
+  #Comments start with ::
+  - triggers: ["::comment0", "::noted"]
+    replace: "The patient's hisotry of *** is noted."
+    word: true
+
+  - triggers: ["::comment1", "::findings"]
+    replace: "The combined findings are consistent with involvement by the patient's previously diagnosed ***."
+    word: true
+
+  - triggers: ["::comment2", "::pending"]
+    replace: "Cytogenetic studies and myeloid gene panel by NGS are in progress and the results will be incorporated into an addendum."
+    word: true
+
+  - triggers: [":say:ldt", "say:ldt",":ihc:disclaimer", ":ihc:ldt"]
+    replace: "Note: Some tests cited above may have been developed and their performance characteristics determined by the UW Medicine Pathology Laboratories. They have not been cleared or approved by the U.S. Food and Drug Administration (FDA). However, the FDA has determined that such clearance or approval is not necessary. These tests are used for clinical purposes and should not be regarded as investigational or for research. The performing laboratories at UWMC, HMC or FHCC are certified under the Clinical Laboratory Improvement Amendments of 1988 (CLIA '88) as qualified to perform high complexity laboratory testing."
+    label: "IHC/ISH/IF Disclaimer about LDTs and the FDA" 
+    word: true
+
+  - triggers: [":say:ihc", "say:ihc", ":say:controls", "say:controls"]
+    replace: "All controls show appropriate reactivity. Immunohistochemical studies are performed in addition to flow cytometry in order to assess antigen expression in the context of tissue architecture."
+    word: true
+
+#Handy
+  - triggers: ["ihc:", ":ihc"]
+    replace: "immunohistochemistry"
+    propagate_case: true
+    word: true
+
+  - trigger: "ihc::"
+    replace: "immunohistochemical"
+    propagate_case: true
+    word: true
+
+  - trigger: "ish:"
+    replace: "in-situ hybridization"
+    propagate_case: true
+    word: true
+    
+  - triggers: ["fcm:", ":fcm"]
+    replace: "flow cytometry"
+    propagate_case: true
+    word: true
+
+  - triggers: ["fcm::", ":fcm:"]
+    replace: "flow cytometric"
+    propagate_case: true
+    word: true
+
+  - trigger: "mph:"
+    replace: "morphology"
+    propagate_case: true
+    word: true
+
+  - trigger: "mph::"
+    replace: "morphologic"
+    propagate_case: true
+    word: true
+
+  - trigger: "mip::"
+    replace: "morphologic and immunophenotypic"
+    propagate_case: true
+    word: true
+
+  
+
+  # - trigger: phenotype
+  #   replace: "phenotype"
+  #   propagate_case: true
+  #   word: true
+
+  # - trigger: i:phenotype
+  #   replace: "immunophenotype"
+  #   propagate_case: true
+  #   word: true
+

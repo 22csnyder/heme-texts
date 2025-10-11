@@ -13,3 +13,4 @@ matches:
   - trigger: "myc"
     replace: "MYC"
     word: true
+

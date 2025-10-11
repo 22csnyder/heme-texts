@@ -1,0 +1,21 @@
+# Shell Command Execution Triggers
+# Usage: Type ```sh followed by shell commands and close with ```
+# Example: ```sh cd ~; ls ``` will execute the command and return the result
+
+matches:
+  # Execute shell commands wrapped in ```sh and ``` blocks
+  - regex: "```sh\\s*(?P<command>.*?)\\s*```"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "{{command}}"
+    label: "Execute shell commands in ```sh...``` blocks"
+    word: true
+    
+    # Usage examples:
+    # ```sh cd ~; ls ``` --> executes cd ~; ls and returns directory listing
+    # ```sh cd ~
+    # ls ``` --> executes cd ~ and ls (multiline commands)
+    # ```sh pwd ``` --> executes pwd and returns current directory

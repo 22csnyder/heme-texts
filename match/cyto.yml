@@ -78,11 +78,11 @@ matches:
     propagate_case: true
     word: true
 
-  - trigger: "eos/cs"
+  - triggers: ["eos/cs", "eos!"]
     replace: "eosinophilia"
     propagate_case: true
     word: true
-  - trigger: "eos/c"
+  - triggers: ["eos/c", "eop!"]
     replace: "eosinophil"
     propagate_case: true
     word: true
@@ -122,14 +122,10 @@ matches:
     propagate_case: true
     word: true
 
-  - trigger: "baso/c"
+  - triggers: ["baso/c","bo\\","baso\\"]
     replace: "basophil"
     propagate_case: true
     word: true
-
-  - triggers: ["bo\\", "bas\\","baso\\"]
-    replace: "basophil"
-    propagate_case: true
 
   - triggers: ["pc/cs","plasma/cs"]
     replace: "plasmacytosis"
@@ -143,13 +139,12 @@ matches:
 
 
 
-
-  - trigger: "t/c"
+  - triggers: ["t/c","tc\\"]
     replace: "T-cell"
     propagate_case: true
     word: true
 
-  - trigger: "b/c"
+  - triggers: ["b/c","bc\\"]
     replace: "B-cell"
     propagate_case: true
     word: true
@@ -215,7 +210,7 @@ matches:
     replace: "eosinophil"
     propagate_case: true
 
-  - trigger: "\\ncs"
+  - triggers: ["\\ncs", "ncs!"]
     replace: "neutrophilia"
     propagate_case: true
     
@@ -223,7 +218,86 @@ matches:
     replace: "lymphocytopenia"
     propagate_case: true
     # word: true
-  - trigger: "\\ycs"
+  - triggers: ["\\ycs", "ycs!"]
     replace: "lymphocytosis"
     propagate_case: true
     # word: true
+
+  
+
+  # dendritic cell markers
+  
+  - trigger: "dc\\"
+    replace: "dendritic cell"
+    propagate_case: true
+    word: true
+
+  - trigger: "pdc\\"
+    replace: "plasmacytic dendritic cell"
+    propagate_case: true
+    word: true
+
+  - trigger: "fdc\\"
+    replace: "follicular dendritic cell"
+    propagate_case: true
+    word: true
+
+
+  # histiocytic markers
+
+  - trigger: "lhc\\"
+    replace: "langerhans type histiocyte"
+    propagate_case: true
+    word: true
+
+  - trigger: "hc\\"
+    replace: "histiocyte"
+    propagate_case: true
+    word: true
+
+
+  # misc myeloid
+  - trigger: "mc\\"
+    replace: "mast cell"
+    propagate_case: true
+    word: true
+
+
+  # Lineages 
+
+  - triggers: ["my::", "my\\"]
+    replace: "myeloid"
+    propagate_case: true
+    word: true
+
+  - triggers: ["ey::", "ey\\"]
+    replace: "erythroid"
+    label: erythroid lineage
+    propagate_case: true
+    word: true
+
+  - triggers: ["ly::", "ly\\"]
+    replace: "lymphoid"
+    label: lymphoid lineage
+    propagate_case: true
+    word: true
+  
+  - triggers: ["mo::", "mo|", "mo~", "mo=", "mo?", "mo/"]
+    replace: "monocytoid" # mo/ monocyte
+    label: monocytoid, properties of monocytes
+    propagate_case: true
+    word: true
+
+
+  - triggers: ["ly?",ly/]
+    replace: "lymphoid"
+    label: lymphoid lineage, lymphocyte-like
+    propagate_case: true
+    word: true
+
+    # mo~ monocytoid
+    # mo\\ monocyte
+    # mo~ monocyte lineage
+
+
+
