@@ -53,6 +53,7 @@ matches:
 
   - triggers: [":say:ihc", "say:ihc", ":say:controls", "say:controls"]
     replace: "All controls show appropriate reactivity. Immunohistochemical studies are performed in addition to flow cytometry in order to assess antigen expression in the context of tissue architecture."
+    label: "IHC/ISH/IF Controls Disclaimer"
     word: true
 
 #Handy

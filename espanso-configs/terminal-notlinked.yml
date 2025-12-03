@@ -1,0 +1,29 @@
+#something i tried on 12/2/2025 but didnt actually work. 
+#not currently symlinked to ~/.config/espanso/config/terminal.yml
+
+
+
+# Terminal-specific configuration
+# This config addresses text replacement issues in terminal applications
+
+# Match common terminal applications
+filter_exec: 
+  "Terminal.app|Cursor.app|iTerm.app|iTerm2.app|Warp.app|Alacritty.app|kitty.app|Hyper.app"
+
+filter_title: "Terminal*|Cursor*"
+
+
+# Use clipboard backend for better compatibility with terminals
+# Terminals often have issues with direct text injection
+backend: Clipboard
+
+# # Increase delays to prevent duplication issues
+inject_delay: 100
+
+# # Increase clipboard threshold for better performance
+clipboard_threshold: 300
+
+# # Add extra delays around paste operations
+pre_paste_delay: 100
+post_paste_delay: 100
+

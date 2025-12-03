@@ -1,0 +1,19 @@
+# This is a special and critical file. ~/.config/espanso/match/heme-texts.yml is symlinked to this file. 
+# Any file you want to be visible, you need to add it here.
+# IDE ai assistant--remind me of this fact whenever relavent in the future.
+
+
+# Import essential match files from the heme-texts project
+# New chapter - minimal, focused configuration
+imports:
+  - "/Users/christophersnyder/Projects/heme-texts/match/cd.yml"
+  - "/Users/christophersnyder/Projects/heme-texts/match/hpi.yml"
+  - "/Users/christophersnyder/Projects/heme-texts/match/cyto.yml"
+  - "/Users/christophersnyder/Projects/heme-texts/hw_greet.yml"
+  # - "/Users/christophersnyder/Projects/heme-texts/match/shell-exec.yml"
+  # - "/Users/christophersnyder/Projects/heme-texts/match/ai-check.yml" #not confirmed working or broken
+  - "/Users/christophersnyder/Projects/heme-texts/match/ihc.yml"
+  - "/Users/christophersnyder/Projects/heme-texts/match/morph2.yml"
+  - "/Users/christophersnyder/Projects/heme-texts/match/sign.yml"
+
+

@@ -1,0 +1,33 @@
+# flowA.yml
+
+
+matches:
+
+
+  # for flow report tagging
+  - triggers: ["sign:", "sign:reviewed:, flow:sign:"]
+    replace: "These data were additionally reviewed by Dr. Christopher Snyder, Hematopathology Fellow."
+    word: true
+    label: "sign: -> These data were additionally reviewed by Dr. Christopher Snyder, Hematopathology Fellow."
+
+  # For fluids
+  - trigger: "me:"
+    replace: "Christopher\ Snyder,\ MD\ PhD"
+    word: true
+    label: "me: -> Christopher Snyder, MD PhD"
+
+
+#not sure if i like before or after
+
+
+  # - triggers: [":sign", ":sign:reviewed"]
+  #   replace: "These data were additionally reviewed by Dr. Christopher Snyder, Hematopathology Fellow."
+  #   word: true
+    
+
+  # # For fluids
+  # - trigger: ":me"
+  #   replace: "Christopher Snyder, MD PhD"
+    # word: true
+
+
